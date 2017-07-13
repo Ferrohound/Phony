@@ -1,0 +1,46 @@
+<Schedule>
+	<Days>
+		<Day day="monday">
+			<Tasks>
+				<Task>
+				</Task>
+			</Tasks>
+		</Day>
+		<Day day="tuesday">
+			<Tasks>
+				<Task>
+				</Task>
+			</Tasks>
+		</Day>
+		<Day day="wednesday">
+			<Tasks>
+				<Task>
+				</Task>
+			</Tasks>
+		</Day>
+		<Day day="thursday">
+			<Tasks>
+				<Task>
+				</Task>
+			</Tasks>
+		</Day>
+		<Day day="friday">
+			<Tasks>
+				<Task>
+				</Task>
+			</Tasks>
+		</Day>
+		<Day day="saturday">
+			<Tasks>
+				<Task>
+				</Task>
+			</Tasks>
+		</Day>
+		<Day day="sunday">
+			<Tasks>
+				<Task>
+				</Task>
+			</Tasks>
+		</Day>
+	</Days>
+</Schedule>
