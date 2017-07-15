@@ -339,7 +339,7 @@ public class Dialogue : MonoBehaviour {
 		
 		dialogue._next = ProgressManager.resetNodes[name];
 		
-		Debug.Log(ProgressManager.resetNodes[name]);
+		//Debug.Log(ProgressManager.resetNodes[name]);
 	}
 
 	public static void saveState()

@@ -9,20 +9,19 @@ public class LoadScene : MonoBehaviour {
 	//public Dialogue dummy;
 	public string scene;
 	public string room;
-	public int doorID = 1;
+	public int DoorID = 1;
 	public static Dictionary<int, Transform> doors;
 	public GameObject doorSign;
 	public bool auto = false;
 	
 	//set the door ID in the hash table, there must be a door with ID 0
-	void Awake()
-	{
+	void Awake(){
 		if(doors == null)
 			doors = new Dictionary<int, Transform>();
-		
-		if(transform.childCount > 0)
-			doors[doorID] = this.gameObject.transform.GetChild(0);
-		
+
+        if (transform.childCount > 0) {
+            doors[DoorID] = gameObject.transform.GetChild(0);
+        }
 		//doorSign = GameObject.Find("RoomNumber");
 		if(doorSign != null)
 			doorSign.SetActive(false);
@@ -32,8 +31,7 @@ public class LoadScene : MonoBehaviour {
 		if(col.tag!="Player")
 			return;
 		
-		if(doorSign!=null)
-		{
+		if(doorSign!=null){
 			doorSign.SetActive(true);
 			doorSign.transform.Find("[roomText]").gameObject.GetComponent<Text>().text = room;
 		}
@@ -43,13 +41,12 @@ public class LoadScene : MonoBehaviour {
 		
 		if(Input.GetButtonDown("Fire1")
 			/*&& (PDotN>0.25|| Vector3.Distance(col.transform.position, transform.position) < 2)*/
-		|| auto)
-		{
+		|| auto){
 			if(doorSign!=null)
 				doorSign.SetActive(false);
 			//Debug.Log("Changing Scenes");
 			Dialogue.saveState();
-			ProgressManager.doorID = doorID;
+			ProgressManager.doorID = DoorID;
 			//preserve.Instance.transitions+=1;
 			//SceneManager.LoadScene(scene);
 			SceneTransition.setScene(scene);
@@ -58,19 +55,16 @@ public class LoadScene : MonoBehaviour {
 	}
 	
 	//set the door number to inactive
-	void OnTriggerExit(Collider col)
-	{
+	void OnTriggerExit(Collider col){
 		if(doorSign != null)
 			doorSign.SetActive(false);
 	}
-	public void Load()
-	{
+	public void Load(){
 		SceneTransition.setScene(scene);
 		transition.GetComponent<SceneTransition>().play = true;
 	}
 	
-	public void setScene(string newScene)
-	{
+	public void setScene(string newScene){
 		scene = newScene;
 	}
 }

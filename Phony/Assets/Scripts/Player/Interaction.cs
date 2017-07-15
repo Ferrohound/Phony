@@ -63,21 +63,22 @@ public class Interaction : MonoBehaviour {
                 lr.enabled = false;
                 callFlag = 1;//call throw in fixed update
             } else if(cam!=null && Physics.Raycast(cam.position, cam.forward, out rhit, 3.0f)){//figure out whether there is an item in front of you
-                if (rhit.transform.GetComponent<GameItem>() != null) {
-
-
+                if (rhit.transform.GetComponent<GameItem>() != null){
                     //do both hands stuff checking before anything else here
 
 
                     if (CrossPlatformInputManager.GetButtonDown("Left") && left == null){//pick up item
                         left = rhit.transform;
                         left.GetComponent<GameItem>().Interact(pc, 1);//ignore collisions
-                    } else if (CrossPlatformInputManager.GetButtonDown("Right") && right == null){//pick up item
+                    }
+                    else if (CrossPlatformInputManager.GetButtonDown("Right") && right == null){//pick up item
                         right = rhit.transform;
                         right.GetComponent<GameItem>().Interact(pc, 2);
                     } else {//update ui
                         //like maybe highlight the item or have stuff pop up
                     }
+                } else if (rhit.transform.GetComponent<Interactable>() != null) {
+                    rhit.transform.GetComponent<Interactable>().Interact(pc, 0); //default behaviour
                 }
             }
         } else {//third person and item is next to you. If multiple items, choose the one that is closest to forward

@@ -88,6 +88,7 @@ public class Weather{
 }
 
 public class World : MonoBehaviour{
+    public bool outside;                                    //if the player is outside
     public List<Abr_Gravity> AllGravitySources;
     public UnityEngine.Light sun_primary;
     public static float GravitationalConstant = 100f;
@@ -145,9 +146,9 @@ public class World : MonoBehaviour{
                 }
             }
             Weather.SetDayTime();
-            Weather.SetSunLevel();
+            if(outside) Weather.SetSunLevel();
         }
-        UpdateSky();
+        if(outside) UpdateSky();
     }
     #region Gravity
     /// <summary>
