@@ -28,7 +28,7 @@ public class Schedule
 {
 	public enum Day {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday};
 	private S_Queue q;
-	private WorldTime time;
+	private float time;
 	Task current;
 	
 	//initialize queues here
@@ -56,7 +56,7 @@ public class Schedule
 	{
 		while(true)
 		{
-			time = World.worldTime;
+			time = World.Time; //changed. revisit if necessary
 			/*if(current != null)
 			{
 				
