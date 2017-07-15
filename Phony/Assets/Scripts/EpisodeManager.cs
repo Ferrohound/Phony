@@ -48,13 +48,7 @@ public class EpisodeManager : MonoBehaviour {
 		ProgressManager.taskList = null;
 		ProgressManager.resetNodes = null;
 	}
-	
-	public static void SetPlayerLocation()
-	{
-		
-		
-		return;
-	}
+
 	void Start () {
 		main = Camera.main;
 		/*if (SceneManager.GetActiveScene().name != "APARTMENT outside SCENE")

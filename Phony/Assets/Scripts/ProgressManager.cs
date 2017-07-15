@@ -46,7 +46,7 @@ public class ProgressManager : MonoBehaviour {
     }
 
     private void UponSceneChange(Scene T0, Scene T1) {
-        Debug.Log(T0.name + "," + T1.name); //will have to check this
+        //Debug.Log(T0.name + "," + T1.name); //works
         Doors = new Dictionary<int, Door>();
         foreach (GameObject dr in GameObject.FindGameObjectsWithTag("Door")){
             try{

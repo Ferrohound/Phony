@@ -12,6 +12,9 @@ public class Door : MonoBehaviour , Interactable {
     public string sceneToLoad = ""; //name of scene to load if necessary
     public int DoorID;
 
+    public AudioClip OpenS;
+    public AudioClip CloseS;
+
 	public GameObject canvas;
     public GameObject Animated; //the gameobject that has the animation applied
 
@@ -43,16 +46,21 @@ public class Door : MonoBehaviour , Interactable {
             state = 0;
         }
     }
+    void OnTriggerEnter(Collider other) {
+
+    }
     public Transform getPosition() {
         return gameObject.transform.GetChild(0).transform;
     }
-    #region Animation Control
+    #region Animation and Sound Control
     private void Open() {
-
+        m_audio.clip = OpenS;
+        m_audio.Play();
     }
 
     private void Close() {
-
+        m_audio.clip = CloseS;
+        m_audio.Play();
     }
     #endregion
 }
