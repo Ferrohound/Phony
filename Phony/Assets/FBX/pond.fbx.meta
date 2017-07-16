@@ -80,6 +80,7 @@ ModelImporter:
     100144: pCylinder8
     100146: pCylinder9
     100148: //RootNode
+    100150: pPlane1
     400000: pCube1
     400002: pCube2
     400004: pCube3
@@ -155,6 +156,7 @@ ModelImporter:
     400144: pCylinder8
     400146: pCylinder9
     400148: //RootNode
+    400150: pPlane1
     2300000: pCube1
     2300002: pCube2
     2300004: pCube3
@@ -229,6 +231,7 @@ ModelImporter:
     2300142: pCylinder76
     2300144: pCylinder8
     2300146: pCylinder9
+    2300148: pPlane1
     3300000: pCube1
     3300002: pCube2
     3300004: pCube3
@@ -303,6 +306,7 @@ ModelImporter:
     3300142: pCylinder76
     3300144: pCylinder8
     3300146: pCylinder9
+    3300148: pPlane1
     4300000: pCylinder11
     4300002: pCylinder12
     4300004: pCylinder20
@@ -377,6 +381,7 @@ ModelImporter:
     4300142: pCylinder74
     4300144: pCylinder75
     4300146: pCylinder76
+    4300148: pPlane1
   materials:
     importMaterials: 1
     materialName: 0
