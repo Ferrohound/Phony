@@ -5,6 +5,8 @@ public class ItemGlow : MonoBehaviour
 {
 	public Color GlowColor;
 	public float LerpFactor = 10;
+	
+	Transform player;
 
 	public Renderer[] Renderers
 	{
@@ -23,6 +25,8 @@ public class ItemGlow : MonoBehaviour
 
 	void Start()
 	{
+		player = GameObject.Find("Player").transform;
+		
 		Renderers = GetComponentsInChildren<Renderer>();
 
 		foreach (var renderer in Renderers)
@@ -33,8 +37,11 @@ public class ItemGlow : MonoBehaviour
 
 	private void OnMouseEnter()
 	{
-		_targetColor = GlowColor;
-		enabled = true;
+		if(Vector3.Distance(transform.position, player.position)<3 && !Dialogue.running)
+		{
+			_targetColor = GlowColor;
+			enabled = true;
+		}
 	}
 
 	private void OnMouseExit()
