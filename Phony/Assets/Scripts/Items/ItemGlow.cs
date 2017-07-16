@@ -43,6 +43,19 @@ public class ItemGlow : MonoBehaviour
 			enabled = true;
 		}
 	}
+	
+	private void OnMouseOver()
+	{
+		if(Vector3.Distance(transform.position, player.position)<3 && !Dialogue.running)
+		{
+			_targetColor = GlowColor;
+			enabled = true;
+		}
+		else
+		{
+			_targetColor = Color.black;
+		}
+	}
 
 	private void OnMouseExit()
 	{
