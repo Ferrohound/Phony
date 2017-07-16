@@ -26,6 +26,9 @@ public class Item{
 	[XmlElement("_attributes")]
 	public List<Attributes> _attributes;
 	
+	[XmlElement("_special")]
+	public bool special;
+	
 	//[XmlElement("Durability")]
 	//public float durability;
 	

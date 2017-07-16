@@ -5,10 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class tmpItem : MonoBehaviour {
 	
-	//for the time being, every item has a single attribute,
-	//a list of effective attributes a particle effect to spawn once it collides with 
-	//an object with said effective attributes
-	
 	//NOTE
 	//eventually expand to something more genral like "melt" or "freeze"
 	//and instantiate the corresponding effect
@@ -17,7 +13,6 @@ public class tmpItem : MonoBehaviour {
 	//for certain occurrences
 	
 	//this objects attribute(s)
-	public new string name;
 	public string attribute;
 	//particle system or objects to instantiate when certain
 	//incoming attributes collide
@@ -25,7 +20,6 @@ public class tmpItem : MonoBehaviour {
 	public List<string> affects;
 	
 	private Dictionary<string, GameObject> dictionary;
-	public bool grabbable = false;
 	public bool destroyAfterUse = false;
 
 	public List<AudioClip> soundclips = new List<AudioClip>(); 
@@ -47,11 +41,6 @@ public class tmpItem : MonoBehaviour {
 		if (tag == "Balloon") {
 			audio_source = GetComponent<AudioSource> ();
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 	
 	public string getAttribute(){
@@ -116,30 +105,6 @@ public class tmpItem : MonoBehaviour {
 				Destroy (this.gameObject);
 			}
 			Destroy(particle, 3f);
-
 		}
-	}
-	
-	public static GameObject Combine(GameObject item1, GameObject item2)
-	{
-		if(item1.GetComponent<tmpItem>() == null || item2.GetComponent<tmpItem>() == null)
-			return null;
-		
-		
-		Destroy(item1);
-		Destroy(item2);
-		//instantiate the combined item
-		//GameObject tmp = Instantiate();
-		//return tmp;
-		return null;
-	}
-	
-	void OnTriggerExit(Collider col){
-		
-	}
-	
-	void OnTriggerStay(Collider col){
-
-
 	}
 }
