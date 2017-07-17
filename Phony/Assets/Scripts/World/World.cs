@@ -184,7 +184,9 @@ public class World : MonoBehaviour{
         time = UnityEngine.Time.time;
         m_audio = GetComponent<AudioSource>();
         Console.SetWorld(this);
-        sun_primary = GameObject.FindGameObjectWithTag("Sun").GetComponent<UnityEngine.Light>();
+        if (outside) {
+            sun_primary = GameObject.FindGameObjectWithTag("Sun").GetComponent<UnityEngine.Light>();
+        }
         northPole = new Vector3(-1f, 0.3f, 0f).normalized;
         weather = new Weather();
     }

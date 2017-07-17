@@ -350,4 +350,10 @@ public class PlayerController : MonoBehaviour{
         itemsInReach.Add(g);
         itemsInReach.Sort((x, y) => x.GetInstanceID().CompareTo(y.GetInstanceID()));
     }
+    /// <summary>
+    /// Call this after scene is loaded
+    /// </summary>
+    public void ReloadAfterSave() {
+        world = GameObject.FindGameObjectWithTag("CONTROL").GetComponent<World>();          //get world script
+    }
 }

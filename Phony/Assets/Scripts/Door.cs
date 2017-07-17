@@ -31,6 +31,7 @@ public class Door : MonoBehaviour , Interactable {
     public void Interact(PlayerController pc, int flag) {
         if (SceneChange) {//if this door loads a new scene
             try {
+                Debug.Log("Loading: " + sceneToLoad);
                 Open();
                 AsyncOperation op = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneToLoad, UnityEngine.SceneManagement.LoadSceneMode.Single);
             } catch (Exception e) {

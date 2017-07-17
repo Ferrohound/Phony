@@ -26,6 +26,8 @@ public class ProgressManager : MonoBehaviour {
     public static Dictionary<int, Door> Doors; //dictionary of all the doors in each scene by ID
     [HideInInspector]
     public static Dictionary<string, int> sceneLoc; //dictionary of saved door for scene
+
+    public static PlayerController pc;
 	
 	void Awake(){
         if (Instance == null){
@@ -40,9 +42,7 @@ public class ProgressManager : MonoBehaviour {
 			Destroy(gameObject);
 		}
         //=======================
-        
-        
-        
+        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     private void UponSceneChange(Scene T0, Scene T1) {
@@ -56,6 +56,7 @@ public class ProgressManager : MonoBehaviour {
                 Debug.LogError(e.Message);
             }
         }
+        sceneLoc[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name] = 0;
         setPlayerLocation(GameObject.FindGameObjectWithTag("Player"));
     }
 
@@ -78,5 +79,6 @@ public class ProgressManager : MonoBehaviour {
             int i = sceneLoc[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];
             player.transform.position = Doors[i].getPosition().position;
         }
+        pc.ReloadAfterSave();
 	}
 }

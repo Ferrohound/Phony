@@ -1420,7 +1420,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4322923049856418, guid: 35ae6993689f7704cb48d8fd9782eca4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 16.49
+      value: 17.043
       objectReference: {fileID: 0}
     - target: {fileID: 4322923049856418, guid: 35ae6993689f7704cb48d8fd9782eca4, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1463,6 +1463,11 @@ Prefab:
     - target: {fileID: 4069440680311364, guid: 35ae6993689f7704cb48d8fd9782eca4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 3.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 82535748138248244, guid: 35ae6993689f7704cb48d8fd9782eca4,
+        type: 2}
+      propertyPath: MinDistance
+      value: 0.5746231
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35ae6993689f7704cb48d8fd9782eca4, type: 2}
@@ -4890,30 +4895,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 495989755}
   m_Mesh: {fileID: 4300064, guid: edfc512a5350a6941952a92f2a0dbd05, type: 3}
---- !u!84 &497390802
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 640
-  m_Height: 480
-  m_AntiAliasing: 1
-  m_DepthFormat: 2
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapMode: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &508235693
 GameObject:
   m_ObjectHideFlags: 0
@@ -5050,6 +5031,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 532714706}
   m_Mesh: {fileID: 4300034, guid: edfc512a5350a6941952a92f2a0dbd05, type: 3}
+--- !u!84 &535126026
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_Width: 640
+  m_Height: 480
+  m_AntiAliasing: 1
+  m_DepthFormat: 2
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_TextureSettings:
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapMode: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &547425132
 Prefab:
   m_ObjectHideFlags: 0
@@ -8387,30 +8392,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 962804528}
   m_Mesh: {fileID: 4300046, guid: edfc512a5350a6941952a92f2a0dbd05, type: 3}
---- !u!84 &975279892
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1600
-  m_Height: 729
-  m_AntiAliasing: 1
-  m_DepthFormat: 2
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapMode: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &990700829
 GameObject:
   m_ObjectHideFlags: 0
@@ -13407,6 +13388,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1443914332}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!84 &1449673679
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_Width: 788
+  m_Height: 452
+  m_AntiAliasing: 1
+  m_DepthFormat: 2
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_TextureSettings:
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapMode: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1453185294 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100018, guid: e25048a54c9b35c419edb2cc91583290, type: 3}
@@ -14045,7 +14050,12 @@ Prefab:
         type: 2}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 497390802}
+      objectReference: {fileID: 535126026}
+    - target: {fileID: 54296151675492024, guid: 8ff66e4222e9744c99692907300d1442,
+        type: 2}
+      propertyPath: m_Drag
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 124238308112149322, guid: 8ff66e4222e9744c99692907300d1442, type: 2}
     - {fileID: 92689035804617456, guid: 8ff66e4222e9744c99692907300d1442, type: 2}
@@ -20231,10 +20241,6 @@ GameObject:
   - component: {fileID: 2092938450}
   - component: {fileID: 2092938451}
   - component: {fileID: 2092938448}
-  - component: {fileID: 2092938449}
-  - component: {fileID: 2092938452}
-  - component: {fileID: 2092938447}
-  - component: {fileID: 2092938446}
   m_Layer: 0
   m_Name: lid
   m_TagString: Untagged
@@ -20255,33 +20261,6 @@ Transform:
   m_Father: {fileID: 1870776653}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &2092938446
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2092938444}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 186286a1e51ca03448ee7f3c2be7f721, type: 3}
---- !u!114 &2092938447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2092938444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55064e849edbd5d4d83145778fc877d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlowColor: {r: 0, g: 0, b: 0, a: 0}
-  LerpFactor: 10
 --- !u!114 &2092938448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20295,25 +20274,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowColor: {r: 0.65160036, g: 0.92454964, b: 0.9632353, a: 1}
   LerpFactor: 10
---- !u!114 &2092938449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2092938444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a7f16d025f6dd94f9040d72b5e5bb78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DB: {fileID: 0}
-  item:
-    name: 
-    _bothHands: 0
-    ID: 0
-    _attributes: 
-    special: 0
-  held: 0
 --- !u!54 &2092938450
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20343,25 +20303,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 186286a1e51ca03448ee7f3c2be7f721, type: 3}
---- !u!114 &2092938452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2092938444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a7f16d025f6dd94f9040d72b5e5bb78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DB: {fileID: 0}
-  item:
-    name: 
-    _bothHands: 0
-    ID: 0
-    _attributes: 
-    special: 0
-  held: 0
 --- !u!23 &2092938453
 MeshRenderer:
   m_ObjectHideFlags: 0

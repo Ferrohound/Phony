@@ -33,6 +33,7 @@ public class Interaction : MonoBehaviour {
     private Collider[] collt;
     private int callFlag;           //so update can call functions in fixedupdate
     private Vector3[] renderPoints;
+    private bool leftDown, rightDown, fDown, f2Down;
 
 	void Start () {
         InitializeVariables();
@@ -41,43 +42,47 @@ public class Interaction : MonoBehaviour {
 	
 	void Update () {
         //dropping items
-        if (left != null && CrossPlatformInputManager.GetButtonDown("Left")){
+        leftDown = CrossPlatformInputManager.GetButtonDown("Left");
+        rightDown = CrossPlatformInputManager.GetButtonDown("Right");
+        fDown = CrossPlatformInputManager.GetButtonDown("Fire1");
+        f2Down = CrossPlatformInputManager.GetButtonDown("Fire2");
+        if (left != null && leftDown){
 		    StartCoroutine(Drop (0));
-        } else if (right != null && CrossPlatformInputManager.GetButtonDown("Right")) {
+        } else if (right != null && rightDown) {
 			StartCoroutine (Drop (1));
         } else if (pc.Perspective == 0) {//first person
-            if (left != null && CrossPlatformInputManager.GetButton("Fire1")) {//Left throw is being charged
+            if (left != null && fDown) {//Left throw is being charged
                 lr.enabled = true;
                 UpdateThrowSpeed();
                 //ThrowPrediction(leftT.position, cam.forward);
                 ThrowPrediction(FPL.position, cam.forward);
-            } else if (right != null && CrossPlatformInputManager.GetButton("Fire2")) {//Right throw is being charged
+            } else if (right != null && f2Down) {//Right throw is being charged
                 lr.enabled = true;
                 UpdateThrowSpeed();
                 //ThrowPrediction(rightT.position, cam.forward);
                 ThrowPrediction(FPR.position, cam.forward);
-            } else if (left != null && CrossPlatformInputManager.GetButtonUp("Fire1")) {//release left throw
+            } else if (left != null && fDown) {//release left throw
                 lr.enabled = false;
                 callFlag = 0;//call throw in fixed update
-            } else if (right != null && CrossPlatformInputManager.GetButtonUp("Fire2")) {//release right throw
+            } else if (right != null && f2Down) {//release right throw
                 lr.enabled = false;
                 callFlag = 1;//call throw in fixed update
-            } else if(cam!=null && Physics.Raycast(cam.position, cam.forward, out rhit, 3.0f)){//figure out whether there is an item in front of you
+            } else if(cam!=null && Physics.Raycast(cam.position, cam.forward, out rhit, 3.0f)){//figure out whether there is an interactable in front of you
                 if (rhit.transform.GetComponent<GameItem>() != null){
                     //do both hands stuff checking before anything else here
 
 
-                    if (CrossPlatformInputManager.GetButtonDown("Left") && left == null){//pick up item
+                    if (leftDown && left == null){//pick up item
                         left = rhit.transform;
                         left.GetComponent<GameItem>().Interact(pc, 1);//ignore collisions
                     }
-                    else if (CrossPlatformInputManager.GetButtonDown("Right") && right == null){//pick up item
+                    else if (rightDown && right == null){//pick up item
                         right = rhit.transform;
                         right.GetComponent<GameItem>().Interact(pc, 2);
                     } else {//update ui
                         //like maybe highlight the item or have stuff pop up
                     }
-                } else if (rhit.transform.GetComponent<Interactable>() != null) {
+                } else if ((leftDown || rightDown) && rhit.transform.GetComponent<Interactable>() != null) {
                     rhit.transform.GetComponent<Interactable>().Interact(pc, 0); //default behaviour
                 }
             }
