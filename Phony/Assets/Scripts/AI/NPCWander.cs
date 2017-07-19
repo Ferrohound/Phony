@@ -168,6 +168,11 @@ public class NPCWander : MonoBehaviour {
 		StartCoroutine(Follow(target));
 	}
 	
+	public void startMoveTo(Transform target)
+	{
+		StartCoroutine(movePos(target));
+	}
+	
 	public IEnumerator Follow(GameObject target)
 	{
 		float distance = Vector3.Distance (target.transform.position, transform.position);
