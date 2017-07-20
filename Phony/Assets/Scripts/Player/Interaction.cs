@@ -126,7 +126,7 @@ public class Interaction : MonoBehaviour {
         throwSpeed = 20f;
         throwTime = 1.0f;
         curCharge = throwSpeed / 2f;
-        sensitivity = 2.0f;
+        sensitivity = 0.001f;
         pc = GetComponent<PlayerController>();
         cam = Camera.main.transform;
         lr = GetComponentInChildren<LineRenderer>();
