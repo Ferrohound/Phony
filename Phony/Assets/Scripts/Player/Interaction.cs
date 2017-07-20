@@ -44,8 +44,8 @@ public class Interaction : MonoBehaviour {
         //dropping items
         leftDown = CrossPlatformInputManager.GetButtonDown("Left");
         rightDown = CrossPlatformInputManager.GetButtonDown("Right");
-        fDown = CrossPlatformInputManager.GetButtonDown("Fire1");
-        f2Down = CrossPlatformInputManager.GetButtonDown("Fire2");
+        fDown = CrossPlatformInputManager.GetButton("Fire1");
+        f2Down = CrossPlatformInputManager.GetButton("Fire2");
         if (left != null && leftDown){
 		    StartCoroutine(Drop (0));
         } else if (right != null && rightDown) {
@@ -61,10 +61,10 @@ public class Interaction : MonoBehaviour {
                 UpdateThrowSpeed();
                 //ThrowPrediction(rightT.position, cam.forward);
                 ThrowPrediction(FPR.position, cam.forward);
-            } else if (left != null && fDown) {//release left throw
+            } else if (left != null && CrossPlatformInputManager.GetButtonUp("Fire1")) {//release left throw
                 lr.enabled = false;
                 callFlag = 0;//call throw in fixed update
-            } else if (right != null && f2Down) {//release right throw
+            } else if (right != null && CrossPlatformInputManager.GetButtonUp("Fire2")) {//release right throw
                 lr.enabled = false;
                 callFlag = 1;//call throw in fixed update
             } else if(cam!=null && Physics.Raycast(cam.position, cam.forward, out rhit, 3.0f)){//figure out whether there is an interactable in front of you
@@ -133,8 +133,7 @@ public class Interaction : MonoBehaviour {
         w = GameObject.FindGameObjectWithTag("CONTROL").GetComponent<World>();
      
         callFlag = -1;
-		if(lr!=null)
-		{
+		if(lr!=null){
 			lr.enabled = false;
 			lr.positionCount = simuPoints;
 			lr.alignment = LineAlignment.View;
