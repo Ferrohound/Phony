@@ -73,7 +73,7 @@ public class ProgressManager : MonoBehaviour {
 			pc.posNew = LoadScene.doors[doorID].position;
 			player.transform.position = LoadScene.doors[doorID].position;
 		}*/
-        if (Doors[doorID] == null) {
+        if (!Doors.ContainsKey(doorID)) {
             Debug.LogError("Door " + doorID + " does not exist in the scene.");
         } else {
             int i = sceneLoc[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];
