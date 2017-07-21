@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Dialogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <_nodes>
+    <Node>
+      <_ID>0</_ID>
+      <_text>… %pIt’s been a few weeks since I’ve lost my job and had to move back home.  </_text>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>1</_ID>
+      <_text>People here are.. </_text>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>2</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>2</_ID>
+      <_text>Well, they’re not nice.%pBut it’s home I suppose. It’s a relief to see some familiar faces. </_text>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>3</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>3</_ID>
+      <_text>I found a job as a delivery boy at the local post office is stressful, but it’s a living I suppose. </_text>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>4</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>4</_ID>
+      <_text>Oh.. </_text>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>5</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>5</_ID>
+      <_text>I guess it’s time to get going...</_text>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>-1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls>
+		<Call _m="SceneLoad">
+			<_args>World_Scene</_args>
+			<_args>0</_args>
+		</Call>
+	  </_postcalls>
+    </Node>
+  </_nodes>
+  <_next>0</_next>
+</Dialogue>

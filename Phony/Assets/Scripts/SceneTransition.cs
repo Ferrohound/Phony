@@ -29,6 +29,13 @@ public class SceneTransition : MonoBehaviour
 	void Start()
 	{
 		currentScene = SceneManager.GetActiveScene();
+		
+		//def change this!
+		if(TransitionMaterial == null)
+		{
+			TransitionMaterial = new Material("Custom/SceneTransitions");
+		}
+		
 		//call scene.name
 		if(canvas.transform.Find("Popup")!=null)
 		{

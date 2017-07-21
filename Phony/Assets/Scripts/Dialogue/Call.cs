@@ -75,10 +75,6 @@ public class Call
 	
 	public void execute()
 	{
-		//don't need target anymore
-		if(_target == null || _target == "")
-			return;
-		
 		//check if script is valid ==============================
 		
 		//=======================================================

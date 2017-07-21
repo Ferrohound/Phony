@@ -271,7 +271,8 @@ public class Dialogue : MonoBehaviour {
 	
 	
 	public void runDialogue(){
-		GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
+		if(GameObject.FindGameObjectWithTag("Player")!=null)
+			GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
 		
 		if(mainCamera == null)
 			mainCamera = Camera.main;
@@ -514,7 +515,8 @@ public class Dialogue : MonoBehaviour {
 		{
 			GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = true;
 		}*/
-		GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = true;
+		if(GameObject.FindGameObjectWithTag("Player")!=null)
+			GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = true;
 		
 		//play the idle animation
 		if(animator!=null)
