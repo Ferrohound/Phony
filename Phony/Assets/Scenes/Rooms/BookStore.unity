@@ -705,7 +705,7 @@ Prefab:
     - target: {fileID: 114666169178362518, guid: 35ae6993689f7704cb48d8fd9782eca4,
         type: 2}
       propertyPath: DoorID
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 82535748138248244, guid: 35ae6993689f7704cb48d8fd9782eca4,
         type: 2}
