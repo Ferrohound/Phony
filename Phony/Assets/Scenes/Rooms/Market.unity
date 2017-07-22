@@ -154,7 +154,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1791133817327108, guid: 745a252d21ea8714289dbfccd124ed5c, type: 2}
       propertyPath: m_Name
-      value: World (1)
+      value: World
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 745a252d21ea8714289dbfccd124ed5c, type: 2}
@@ -311,7 +311,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1041216319348190, guid: a1fdb8c03d509a44797afae2316a987c, type: 2}
       propertyPath: m_Name
-      value: Required (1)
+      value: Required
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1fdb8c03d509a44797afae2316a987c, type: 2}
@@ -405,10 +405,6 @@ GameObject:
 --- !u!1 &1408200222 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100164, guid: c73ba800bd74b764fa3a75bf5a846ddb, type: 3}
-  m_PrefabInternal: {fileID: 1408200214}
---- !u!1 &1408200223 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100162, guid: c73ba800bd74b764fa3a75bf5a846ddb, type: 3}
   m_PrefabInternal: {fileID: 1408200214}
 --- !u!1 &1408200224 stripped
 GameObject:
@@ -618,18 +614,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.07684488, y: 0.024980253, z: 0.08634018}
   m_Center: {x: -0.000012238977, y: 0.011577896, z: -0.000024585057}
---- !u!65 &1408200258
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1408200223}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1064059, y: 0.028983673, z: 0.5609027}
-  m_Center: {x: -0.22543377, y: -0.014491837, z: 0.112495236}
 --- !u!65 &1408200259
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1091,6 +1075,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.412501
       objectReference: {fileID: 0}
+    - target: {fileID: 82535748138248244, guid: 35ae6993689f7704cb48d8fd9782eca4,
+        type: 2}
+      propertyPath: MinDistance
+      value: 1.2954674
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35ae6993689f7704cb48d8fd9782eca4, type: 2}
   m_IsPrefabParent: 0
@@ -1135,7 +1124,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1229514208536314, guid: 138d100f8314b0345836810e3213b747, type: 2}
       propertyPath: m_Name
-      value: PhysicsFloor (1)
+      value: PhysicsFloor
       objectReference: {fileID: 0}
     - target: {fileID: 4006532414809008, guid: 138d100f8314b0345836810e3213b747, type: 2}
       propertyPath: m_LocalScale.x
