@@ -88,6 +88,7 @@ public class PlayerController : MonoBehaviour{
     }
     
     //VARIABLES USED FOR INTERNAL CALCULATION
+    [HideInInspector]
     public Vector3 posOld, posNew, temp;
     private Vector2 input;
     private RaycastHit hitInfo;

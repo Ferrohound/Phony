@@ -29,10 +29,12 @@ public class ProgressManager : MonoBehaviour {
     public static Dictionary<string, int> sceneLoc; //dictionary of saved door for scene
 
     public static PlayerController pc;
+    private static Rigidbody pc_rb;
+    private static CapsuleCollider pc_cc;
 	
 	void Awake(){
         if (Instance == null){
-			DontDestroyOnLoad (gameObject);
+			DontDestroyOnLoad(gameObject);
 			Instance = this;
             if (sceneLoc == null){ //will have to change so that this will be loaded from a save file
                 sceneLoc = new Dictionary<string, int>();
@@ -44,6 +46,8 @@ public class ProgressManager : MonoBehaviour {
 		}
         //=======================
         pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        pc_rb = pc.gameObject.GetComponent<Rigidbody>();
+        pc_cc = pc.gameObject.GetComponent<CapsuleCollider>();
     }
 
     private void UponSceneChange(Scene T0, Scene T1) {
@@ -61,14 +65,15 @@ public class ProgressManager : MonoBehaviour {
         if (!sceneLoc.ContainsKey(name)) {
             sceneLoc[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name] = 0;
         }
-        setPlayerLocation(GameObject.FindGameObjectWithTag("Player"));
+        setPlayerLocation(pc.transform);
+        ActivatePlayerPhysics();
     }
 
     void Start(){
 		
 	}
 	
-	public static void setPlayerLocation(GameObject player){
+	public static void setPlayerLocation(Transform player){
         /*
         //load scene doesn't exist in context
 		if(LoadScene.doors.ContainsKey(doorID)){
@@ -81,12 +86,22 @@ public class ProgressManager : MonoBehaviour {
             Debug.LogError("Door " + doorID + " does not exist in the scene.");
         } else {
             int i = sceneLoc[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];
-            player.transform.position = Doors[i].getPosition().position;
+            player.position = Doors[i].getPosition().position;
         }
         pc.ReloadAfterSave();
 	}
 
     public static void SetSceneDoor(string scene, int door) {
         sceneLoc[scene] = door;
+    }
+
+    public static void DeactivatePlayerPhysics() {
+        pc_rb.isKinematic = true;
+        pc_cc.enabled = false;
+    }
+    public static void ActivatePlayerPhysics() {
+        pc_rb.isKinematic = false;
+        pc_rb.velocity = Vector3.zero;
+        pc_cc.enabled = true;
     }
 }

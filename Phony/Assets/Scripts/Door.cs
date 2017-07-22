@@ -37,6 +37,7 @@ public class Door : MonoBehaviour , Interactable {
                 if (ConnectedDoorID != -1) {
                     ProgressManager.SetSceneDoor(sceneToLoad, ConnectedDoorID);
                 }
+                ProgressManager.DeactivatePlayerPhysics();
                 AsyncOperation op = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneToLoad, UnityEngine.SceneManagement.LoadSceneMode.Single);
             } catch (Exception e) {
                 Debug.LogError(e.Message);
