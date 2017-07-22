@@ -11,6 +11,7 @@ public class Door : MonoBehaviour , Interactable {
     public bool SceneChange = false; //whether opening this door actually changes the scene
     public string sceneToLoad = ""; //name of scene to load if necessary
     public int DoorID;
+    public int ConnectedDoorID = -1; 
 
     public AudioClip OpenS;
     public AudioClip CloseS;
@@ -21,7 +22,7 @@ public class Door : MonoBehaviour , Interactable {
     private Animator m_am;
     private AudioSource m_audio;
     private int state;
-
+    
 	void Start () {
         m_am = GetComponent<Animator>();
         m_audio = GetComponent<AudioSource>();
@@ -33,6 +34,9 @@ public class Door : MonoBehaviour , Interactable {
             try {
                 Debug.Log("Loading: " + sceneToLoad);
                 Open();
+                if (ConnectedDoorID != -1) {
+                    ProgressManager.SetSceneDoor(sceneToLoad, ConnectedDoorID);
+                }
                 AsyncOperation op = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneToLoad, UnityEngine.SceneManagement.LoadSceneMode.Single);
             } catch (Exception e) {
                 Debug.LogError(e.Message);

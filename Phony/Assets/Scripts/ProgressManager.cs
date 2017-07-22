@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 /*
 	Use this to manage the tasks that the player has achieved
+    It also sets the player location to any door in the scene. 
 */
 
 public class ProgressManager : MonoBehaviour {
@@ -56,7 +57,10 @@ public class ProgressManager : MonoBehaviour {
                 Debug.LogError(e.Message);
             }
         }
-        sceneLoc[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name] = 0;
+        string name = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        if (!sceneLoc.ContainsKey(name)) {
+            sceneLoc[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name] = 0;
+        }
         setPlayerLocation(GameObject.FindGameObjectWithTag("Player"));
     }
 
@@ -81,4 +85,8 @@ public class ProgressManager : MonoBehaviour {
         }
         pc.ReloadAfterSave();
 	}
+
+    public static void SetSceneDoor(string scene, int door) {
+        sceneLoc[scene] = door;
+    }
 }
