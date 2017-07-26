@@ -35,7 +35,7 @@ public class Interaction : MonoBehaviour {
     private Collider[] collt;
     private int callFlag;           //so update can call functions in fixedupdate
     private Vector3[] renderPoints;
-    private bool leftDown, rightDown, fDown, f2Down;
+    private bool leftDown, rightDown, fDown, f2Down, fUp, f2Up;
 
 	void Start () {
         InitializeVariables();
@@ -56,8 +56,14 @@ public class Interaction : MonoBehaviour {
         //dropping items
         leftDown = CrossPlatformInputManager.GetButtonDown("Left");
         rightDown = CrossPlatformInputManager.GetButtonDown("Right");
-        fDown = CrossPlatformInputManager.GetButtonDown("Fire1");
-        f2Down = CrossPlatformInputManager.GetButtonDown("Fire2");
+        fDown = CrossPlatformInputManager.GetButton("Fire1");
+        f2Down = CrossPlatformInputManager.GetButton("Fire2");
+		fUp = CrossPlatformInputManager.GetButtonUp("Fire1");
+		f2Up = CrossPlatformInputManager.GetButtonUp("Fire2");
+		
+		Debug.Log(fDown);
+		//Debug.Log(f2Down);
+		
         if (left != null && leftDown){
 			//turn off left throwing UI
 			//and combine UI if right isn't null
@@ -75,18 +81,20 @@ public class Interaction : MonoBehaviour {
 			HUD.Combine.SetActive(false);
 			
 			StartCoroutine (Drop (1));
-        } else if (pc.Perspective == 0) {//first person
-            if (left != null && fDown) {//Left throw is being charged
+        }
+		if (pc.Perspective == 0) {//first person
+            if (left != null && fDown && !fUp) {//Left throw is being charged
                 lr.enabled = true;
                 UpdateThrowSpeed();
                 //ThrowPrediction(leftT.position, cam.forward);
                 ThrowPrediction(FPL.position, cam.forward);
-            } else if (right != null && f2Down) {//Right throw is being charged
+            } else if (right != null && f2Down && !f2Up) {//Right throw is being charged
                 lr.enabled = true;
                 UpdateThrowSpeed();
                 //ThrowPrediction(rightT.position, cam.forward);
                 ThrowPrediction(FPR.position, cam.forward);
-            } else if (left != null && fDown) {//release left throw
+            } else if (left != null && !fDown && fUp) {//release left throw
+				Debug.Log("Throw!");
 				//turn off left throwing UI
 				//and combine UI if right isn't null
 				//====================================================================TO DO
@@ -95,7 +103,8 @@ public class Interaction : MonoBehaviour {
 				
                 lr.enabled = false;
                 callFlag = 0;//call throw in fixed update
-            } else if (right != null && f2Down) {//release right throw
+            } else if (right != null && !f2Down && f2Up) {//release right throw
+				Debug.Log("Throw!");
 				//turn off right throw UI
 				//and combine UI if right isn't null
 				//====================================================================TO DO
@@ -255,6 +264,7 @@ public class Interaction : MonoBehaviour {
     /// </summary>
     /// <param name="side">True for left, false for right</param>
     private void Throw (bool side) {
+		Debug.Log("Let's see..");
         if (side) { 
             left.GetComponent<Rigidbody>().velocity = cam.forward.normalized * curCharge+pc.Velocity;
             left.GetComponent<GameItem>().Interact(pc, 0);
