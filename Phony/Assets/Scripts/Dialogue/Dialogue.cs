@@ -68,6 +68,7 @@ public class Dialogue : MonoBehaviour {
 	private int select = -2;
 	int nodeID = -1;
 	int numOptions = 0;
+	Node current;
 	
 	//Auto would cause the dialogue to run once the player enters the
 	//trigger area
@@ -413,7 +414,6 @@ public class Dialogue : MonoBehaviour {
 		
 		nodeID = dialogue._next;
 		
-		Node current;
 		//while the node isn't an exit node...
 		while(nodeID!=-1)
 		{
@@ -540,9 +540,12 @@ public class Dialogue : MonoBehaviour {
 		
 		//================================================================TEXT DELAYS ==========
 		float dDelay = 0.01f;
+		float tmpDelay = dDelay;
 		float pDelay = 0.3f;
 		
 		bool dummy = false;
+		
+		int callCount = 0;
 		
 		while(true){
 			
@@ -561,7 +564,58 @@ public class Dialogue : MonoBehaviour {
 				index++;
 				nodeText.GetComponent<Text>().text+='\n';
 			}
+			else if((displayText[index] == '!' || displayText[index] == '?' ||
+				displayText[index] == '.') && index<strLen-1 && 
+				(displayText[index+1] == ' '|| displayText[index+1] == '\n')){
+					yield return new WaitForSeconds(pDelay);
+				}
+			
+			//mid-text functions
+			else if(displayText[index] == '%')
+			{
+				switch(displayText[index+1])
+				{
+					//execute a midcall
+					case 'c':
+					current._midcalls[callCount].execute();
+					index++;
+					callCount++;
+					break;
+					
+					//pause the dialogue for a moment
+					case 'p':
+					index++;
+					break;
+					
+					//toggle bold
+					case 'b':
+					index++;
+					break;
+					
+					//increase textspeed
+					case 'i':
+					index++;
+					tmpDelay += 0.2f;
+					break;
+					
+					//decrease textspeed
+					case 'd':
+					index++;
+					tmpDelay -= 0.2f;
+					break;
+					
+					//reset textSpeed
+					case 'r':
+					index++;
+					tmpDelay = dDelay;
+					break;
+					
+					default:
+					break;
+				}
+			}
 			//otherwise go normally
+			//probably move back to previous position
 			else{
 				nodeText.GetComponent<Text>().text += displayText[index];
 				
@@ -569,18 +623,12 @@ public class Dialogue : MonoBehaviour {
 					Source.PlayOneShot(Voice);
 			}
 			
-			if((displayText[index] == '!' || displayText[index] == '?' ||
-				displayText[index] == '.') && index<strLen-1 && 
-				(displayText[index+1] == ' '|| displayText[index+1] == '\n')){
-					yield return new WaitForSeconds(pDelay);
-				}
-			
 			index++;
 			
 			if(index<strLen){
 				//play a sound potentially
 				//wait for a moment before adding next character
-				yield return new WaitForSeconds(dDelay);
+				yield return new WaitForSeconds(tmpDelay);
 			}
 			else{
 				break;
