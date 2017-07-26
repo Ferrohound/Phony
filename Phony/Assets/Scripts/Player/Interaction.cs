@@ -21,7 +21,9 @@ public class Interaction : MonoBehaviour {
     private float curCharge;        //Current speed charge of a throw
     private Vector3[] vPoints;      //Points to simulate for linerender
     //private bool fpILA;             //In first person, whether you have been looking at an item
-    //Components
+    float carryDistance = .75f;
+	
+	//Components
     private LineRenderer lr;
     private PlayerController pc;
     private Transform cam;
@@ -41,6 +43,16 @@ public class Interaction : MonoBehaviour {
 	}
 	
 	void Update () {
+		Vector3 f = cam.forward;
+		Vector3 up = cam.up;
+		Vector3 RD = Vector3.Cross(up, f);
+		Vector3 LD = Vector3.Cross(f, up);
+		
+		FPL.position = (cam.position/* - new Vector3(-3, 0, 0)*/) 
+			+ cam.transform.forward * carryDistance + LD * 0.5f;
+		FPR.position = (cam.position/* + new Vector3(3, 0, 0)*/) 
+			+ cam.transform.forward * carryDistance + RD * 0.5f;
+		//Debug.Log(cam.forward);
         //dropping items
         leftDown = CrossPlatformInputManager.GetButtonDown("Left");
         rightDown = CrossPlatformInputManager.GetButtonDown("Right");
