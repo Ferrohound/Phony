@@ -47,8 +47,21 @@ public class Interaction : MonoBehaviour {
         fDown = CrossPlatformInputManager.GetButtonDown("Fire1");
         f2Down = CrossPlatformInputManager.GetButtonDown("Fire2");
         if (left != null && leftDown){
+			//turn off left throwing UI
+			//and combine UI if right isn't null
+			//probably make a function for this later
+			//====================================================================TO DO
+			HUD.LeftThrow.SetActive(false);
+			HUD.Combine.SetActive(false);
+			
 		    StartCoroutine(Drop (0));
         } else if (right != null && rightDown) {
+			//turn off right throw UI
+			//and combine UI if right isn't null
+			//====================================================================TO DO
+			HUD.RightThrow.SetActive(false);
+			HUD.Combine.SetActive(false);
+			
 			StartCoroutine (Drop (1));
         } else if (pc.Perspective == 0) {//first person
             if (left != null && fDown) {//Left throw is being charged
@@ -62,9 +75,21 @@ public class Interaction : MonoBehaviour {
                 //ThrowPrediction(rightT.position, cam.forward);
                 ThrowPrediction(FPR.position, cam.forward);
             } else if (left != null && fDown) {//release left throw
+				//turn off left throwing UI
+				//and combine UI if right isn't null
+				//====================================================================TO DO
+				HUD.LeftThrow.SetActive(false);
+				HUD.Combine.SetActive(false);
+				
                 lr.enabled = false;
                 callFlag = 0;//call throw in fixed update
             } else if (right != null && f2Down) {//release right throw
+				//turn off right throw UI
+				//and combine UI if right isn't null
+				//====================================================================TO DO
+				HUD.RightThrow.SetActive(false);
+				HUD.Combine.SetActive(false);
+				
                 lr.enabled = false;
                 callFlag = 1;//call throw in fixed update
             } else if(cam!=null && Physics.Raycast(cam.position, cam.forward, out rhit, 3.0f)){//figure out whether there is an interactable in front of you
@@ -73,19 +98,49 @@ public class Interaction : MonoBehaviour {
 
 
                     if (leftDown && left == null){//pick up item
+						//turn off left holding UI element and on leftThrow
+						//==============================================================TO DO
+						HUD.LeftPickUp.SetActive(false);
+						HUD.LeftThrow.SetActive(true);
+						if(right != null)
+							HUD.Combine.SetActive(false);
+						
                         left = rhit.transform;
                         left.GetComponent<GameItem>().Interact(pc, 1);//ignore collisions
                     }
                     else if (rightDown && right == null){//pick up item
+						//turn off right holding UI and on rightThrow
+						//==============================================================TO DO
+						HUD.RightPickUp.SetActive(false);
+						HUD.RightThrow.SetActive(true);
+						if(left != null)
+							HUD.Combine.SetActive(false);
+						
                         right = rhit.transform;
                         right.GetComponent<GameItem>().Interact(pc, 2);
-                    } else {//update ui
+                    } else 
+					{//update ui
                         //like maybe highlight the item or have stuff pop up
+						//if left is null
+						if(left == null)
+						{
+							HUD.LeftPickUp.SetActive(true);
+						}
+						if(right == null)
+						{
+							HUD.RightPickUp.SetActive(true);
+						}
                     }
                 } else if ((leftDown || rightDown) && rhit.transform.GetComponent<Interactable>() != null) {
                     rhit.transform.GetComponent<Interactable>().Interact(pc, 0); //default behaviour
                 }
             }
+			//otherwise, turn off UI stuff =============================================TO DO
+			else
+			{
+				HUD.LeftPickUp.SetActive(false);
+				HUD.RightPickUp.SetActive(false);
+			}
         } else {//third person and item is next to you. If multiple items, choose the one that is closest to forward
             if (!pc.itemsAvailable()) return;
             if (CrossPlatformInputManager.GetButtonDown("Left")) { 

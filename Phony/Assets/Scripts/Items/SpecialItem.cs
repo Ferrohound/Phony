@@ -13,7 +13,10 @@ public class SpecialItem : GameItem
 	//static list holding all of the special items
 	public static Dictionary<string, SpecialItem> SpecialItems = 
 		new Dictionary<string, SpecialItem>();
-		
+	
+	//tuple Item1 being the target node, Item2 being the reset node
+	//apparently tuples aren't things??
+	//Dictionary<string, Tuple<int, int>> NPCKey;
 	Dictionary<string, int> NPCTargets;
 	Dictionary<string, int> NPCResets;
 		

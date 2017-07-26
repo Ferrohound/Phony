@@ -3,7 +3,7 @@
   <_nodes>
     <Node>
       <_ID>0</_ID>
-      <_text>… %pIt’s been a few weeks since I’ve lost my job and had to move back home.  </_text>
+      <_text><![CDATA[… %pIt’s been a <b>few weeks</b> since I’ve lost my job and had to move back home.]]>  </_text>
       <_reset>0</_reset>
       <_options>
         <dialogueOption>
