@@ -894,7 +894,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1587955665523794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.501, y: 2.4217942, z: 8.57}
+  m_LocalPosition: {x: -40.155266, y: 0.5, z: -5.1705008}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 4870972758764620}
@@ -1843,9 +1843,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1843403710862774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 09653e9496219ea45af176660bae9e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  State: 1
 --- !u!114 &114569342314546470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1878,7 +1879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thing: Orange
-  speaker: {fileID: 114482293723655004}
+  speaker: {fileID: 0}
   tableVal: FoundOrange
   beginVal: LookingOrange
   targetNode: 9
@@ -1891,9 +1892,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1843403710862774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: e14db0074d1aa664ea724c6b6aef087b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Teacup
+  animator: {fileID: 95668614351565744}
+  coolingDown: 0
+  Path: 
+  dialogueWindow: {fileID: 1632059555541220, guid: 5f648ceb5b9a81148beab16285d56e86,
+    type: 2}
+  buttonPrefab: {fileID: 1600554839034878, guid: 5fbe976f7984c5e42b1a88351e76d7d7,
+    type: 2}
+  mainCamera: {fileID: 0}
+  dialogueCamera: {fileID: 0}
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  talkDistance: 5
+  talkCooldown: 2
+  Source: {fileID: 0}
+  Voice: {fileID: 0}
+  Enter: {fileID: 0}
+  Exit: {fileID: 0}
+  auto: 0
 --- !u!124 &124329026364333106
 Behaviour:
   m_ObjectHideFlags: 1

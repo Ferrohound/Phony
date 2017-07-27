@@ -134,6 +134,7 @@ public class Character : MonoBehaviour{
 		}
 	}
 	
+	//change to boolso can use HUD
 	void RunDCheck(Collider col)
 	{
 		//if the player presses "interact"/Fire1, disable player movement and

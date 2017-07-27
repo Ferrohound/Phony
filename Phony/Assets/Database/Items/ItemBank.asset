@@ -6,13 +6,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccfee2b6509f89a4da3869499874bc7d, type: 3}
   m_Name: ItemBank
   m_EditorClassIdentifier: Assembly-CSharp::ItemDatabase
   items:
-  - Name: 
+  - Name: Teddy
     Attribute: 0
     item:
       name: 
@@ -22,7 +22,7 @@ MonoBehaviour:
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
-  - Name: 
+  - Name: Sink
     Attribute: 0
     item:
       name: 
@@ -32,7 +32,7 @@ MonoBehaviour:
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
-  - Name: 
+  - Name: TeapotBase
     Attribute: 0
     item:
       name: 
@@ -42,7 +42,7 @@ MonoBehaviour:
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
-  - Name: 
+  - Name: TeapotLid
     Attribute: 0
     item:
       name: 
@@ -52,7 +52,7 @@ MonoBehaviour:
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
-  - Name: 
+  - Name: Teapot
     Attribute: 0
     item:
       name: 
@@ -62,7 +62,7 @@ MonoBehaviour:
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
-  - Name: 
+  - Name: Computer
     Attribute: 0
     item:
       name: 
@@ -72,7 +72,157 @@ MonoBehaviour:
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
-  - Name: 
+  - Name: Microwave
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: Paper
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: Pencil
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: SodaCan
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: Lightbulb
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: GoodCake
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: Flour
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: Egg
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: Stool
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: Rock
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: Book
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: FlowerPot
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: Paint
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: Post
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: Billboard
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: Sign
     Attribute: 0
     item:
       name: 
