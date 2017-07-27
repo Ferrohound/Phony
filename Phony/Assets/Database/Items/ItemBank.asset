@@ -11,4 +11,154 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccfee2b6509f89a4da3869499874bc7d, type: 3}
   m_Name: ItemBank
   m_EditorClassIdentifier: Assembly-CSharp::ItemDatabase
-  items: []
+  items:
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}
+  - Name: 
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 0
+      _attributes: 
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 0}

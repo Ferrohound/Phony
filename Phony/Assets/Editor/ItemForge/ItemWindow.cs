@@ -6,9 +6,9 @@ using System;
 
 //custom thing for editing items
 
-[CustomPropertyDrawer(typeof(Item))]
-public class ItemWindow : PropertyDrawer
-{
+//[CustomPropertyDrawer(typeof(Item))]
+//public class ItemWindow : PropertyDrawer
+//{
 	//public Item I;
 	
 	/*
@@ -19,9 +19,9 @@ public class ItemWindow : PropertyDrawer
 	*/
 	
 	//override that sexy gui
-	public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
-	{
-		//DrawDefaultInspector();
-	}
+	//public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+	//{
+	//	DrawDefaultInspector();
+	//}
 	
-}
+//}
