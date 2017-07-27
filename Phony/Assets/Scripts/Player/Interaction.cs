@@ -61,7 +61,7 @@ public class Interaction : MonoBehaviour {
 		fUp = CrossPlatformInputManager.GetButtonUp("Fire1");
 		f2Up = CrossPlatformInputManager.GetButtonUp("Fire2");
 		
-		Debug.Log(fDown);
+		//Debug.Log(fDown);
 		//Debug.Log(f2Down);
 		
 		if(left!=null && right!=null)
@@ -100,6 +100,7 @@ public class Interaction : MonoBehaviour {
 			else if(right!=null && left!= null && f2Down && fDown)
 			{
 				Debug.Log("They're gonna combine!");
+				Combine();
 			}
 			else if (left != null && !fDown && fUp) {//release left throw
 				//turn off left throwing UI
