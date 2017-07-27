@@ -31,16 +31,4 @@ public class ItemContainer{
 
 	Holds a list of itemContainors
 */
-public class ItemDatabase : ScriptableObject
-{
-	//public List ItemData;
-	//use .Find() to get the thing
-	public /*static */List<ItemContainer> items;
-	//need a key of items instead
-	public /*static */Dictionary<string, GameObject> ItemBank;
-	
-	public void setKey(string key, GameObject value)
-	{
-		ItemBank[key] = value;
-	}
-}
+

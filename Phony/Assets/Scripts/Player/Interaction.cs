@@ -64,6 +64,9 @@ public class Interaction : MonoBehaviour {
 		Debug.Log(fDown);
 		//Debug.Log(f2Down);
 		
+		if(left!=null && right!=null)
+			HUD.Combine.SetActive(true);
+		
         if (left != null && leftDown){
 			//turn off left throwing UI
 			//and combine UI if right isn't null
@@ -83,18 +86,22 @@ public class Interaction : MonoBehaviour {
 			StartCoroutine (Drop (1));
         }
 		if (pc.Perspective == 0) {//first person
-            if (left != null && fDown && !fUp) {//Left throw is being charged
+            if (left != null && fDown && !fUp && !f2Down) {//Left throw is being charged
                 lr.enabled = true;
                 UpdateThrowSpeed();
                 //ThrowPrediction(leftT.position, cam.forward);
                 ThrowPrediction(FPL.position, cam.forward);
-            } else if (right != null && f2Down && !f2Up) {//Right throw is being charged
+            } else if (right != null && f2Down && !f2Up && !fDown) {//Right throw is being charged
                 lr.enabled = true;
                 UpdateThrowSpeed();
                 //ThrowPrediction(rightT.position, cam.forward);
                 ThrowPrediction(FPR.position, cam.forward);
-            } else if (left != null && !fDown && fUp) {//release left throw
-				Debug.Log("Throw!");
+            } 
+			else if(right!=null && left!= null && f2Down && fDown)
+			{
+				Debug.Log("They're gonna combine!");
+			}
+			else if (left != null && !fDown && fUp) {//release left throw
 				//turn off left throwing UI
 				//and combine UI if right isn't null
 				//====================================================================TO DO
@@ -104,7 +111,6 @@ public class Interaction : MonoBehaviour {
                 lr.enabled = false;
                 callFlag = 0;//call throw in fixed update
             } else if (right != null && !f2Down && f2Up) {//release right throw
-				Debug.Log("Throw!");
 				//turn off right throw UI
 				//and combine UI if right isn't null
 				//====================================================================TO DO
@@ -264,7 +270,6 @@ public class Interaction : MonoBehaviour {
     /// </summary>
     /// <param name="side">True for left, false for right</param>
     private void Throw (bool side) {
-		Debug.Log("Let's see..");
         if (side) { 
             left.GetComponent<Rigidbody>().velocity = cam.forward.normalized * curCharge+pc.Velocity;
             left.GetComponent<GameItem>().Interact(pc, 0);

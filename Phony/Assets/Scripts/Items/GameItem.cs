@@ -15,6 +15,8 @@ public class GameItem : MonoBehaviour, Interactable {
 	public static ItemDatabase iDatabase;
 	
     public Item item;
+	public string itemName;
+	public string itemTest;
     public bool held; //used for trigger checking in 3d person
     private Rigidbody rb;
     private Collider col;
@@ -26,6 +28,8 @@ public class GameItem : MonoBehaviour, Interactable {
         rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
         held = false;
+		//load item from database via name
+		LoadItem(itemName);
     }
     void FixedUpdate() { 
         
@@ -37,6 +41,13 @@ public class GameItem : MonoBehaviour, Interactable {
     public void LoadItem(Item it) {
         item = it;
     }
+	
+	public void LoadItem(string name)
+	{
+		//error check
+		if(iDatabase.ExistingItemBank.ContainsKey(name))
+			item = iDatabase.ExistingItemBank[name];
+	}
     /// <summary>
     /// 0 - drop item.
     /// 1 - pickup in left
