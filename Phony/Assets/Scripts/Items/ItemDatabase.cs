@@ -8,8 +8,8 @@ public class ItemDatabase : ScriptableObject
 	//use .Find() to get the thing
 	public /*static */List<ItemContainer> items;
 	//need a key of items instead
-	public /*static */Dictionary<string, GameObject> ItemBank;
-	public Dictionary<string, Item> ExistingItemBank;
+	public /*static */Dictionary<string, GameObject> ItemBank = new Dictionary<string, GameObject>();
+	public Dictionary<string, Item> ExistingItemBank = new Dictionary<string, Item>();
 	
 	public void setKey(string key, GameObject value)
 	{

@@ -304,9 +304,13 @@ public class Interaction : MonoBehaviour {
 		
 		//play an animation probably ================================== TO DO
 		
-		//destroy the two held items
-		Destroy(left.gameObject);
-		Destroy(right.gameObject);
+		//detirmine which items to destroy
+		if(true)
+		{
+			//destroy the two held items
+			Destroy(left.gameObject);
+			Destroy(right.gameObject);
+		}
 		
 		//instantiate the new item and set its parent to the left hand
 		Instantiate(newItem, leftT);

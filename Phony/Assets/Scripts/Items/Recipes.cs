@@ -64,8 +64,18 @@ public class Recipes{
 		Recipes tmp = (Recipes) serial.Deserialize(reader);
 		
 		reader.Close();
-		
 		//parse through the recipes, adding them to the hash table
+		
+		recipeList3 = new Dictionary<Ingredients, Recipe>();
+		
+		for( int i = 0; i < tmp.recipes.Count ; i++)
+		{
+			//create an ingredient for each recipe's ingredients and add that to
+			//recipeList3
+			Recipe R = tmp.recipes[i];
+			Ingredients In = new Ingredients(i, R._item1, R._item2);
+			recipeList3[In] = R;
+		}
 		
 		return tmp;
 	}

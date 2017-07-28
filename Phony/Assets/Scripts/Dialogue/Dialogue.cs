@@ -399,7 +399,7 @@ public class Dialogue : MonoBehaviour {
 		if(animator!=null)
 		{
 			//animator.SetBool("InConversation", true);
-			animator.Play("Conversation");
+			animator.Play("conversation");
 		}
 		
 		dialogueWindow.SetActive(true);

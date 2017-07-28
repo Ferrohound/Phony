@@ -115,8 +115,12 @@ public class GameItem : MonoBehaviour, Interactable {
 		Ingredients ing = new Ingredients( 0, item.name, other.item.name);
 		Recipe result = Recipes.Cook(ing);
 		
+		//no recipe for this exists, do it via attribute
 		if (result == null)
+		{
+			AttributeCollision(other);
 			return;
+		}
 		
 		Debug.Log(result._name);
 		//do other stuff============================================================TO DO
@@ -130,5 +134,11 @@ public class GameItem : MonoBehaviour, Interactable {
 		
 		
 		//and destroy items accordingly===============================================TO DO
+	}
+	
+	//check the item's attribute, spawn corresponding things, delete, etc..
+	void AttributeCollision(GameItem other)
+	{
+		
 	}
 }
