@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(UnityEngine.AI.NavMeshAgent))]
 public class NPCWander : MonoBehaviour {
 	
 	public Transform target;
@@ -24,6 +25,7 @@ public class NPCWander : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
+		nav.baseOffset = 0;
 		animator = GetComponentInChildren<Animator>();
 	}
 	
