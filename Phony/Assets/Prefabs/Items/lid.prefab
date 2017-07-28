@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 54044475948577202}
   - component: {fileID: 114911838060578800}
   - component: {fileID: 65983599192684550}
+  - component: {fileID: 114932932690431582}
   m_Layer: 0
   m_Name: lid
   m_TagString: Untagged
@@ -123,3 +124,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowColor: {r: 0.65160036, g: 0.92454964, b: 0.9632353, a: 1}
   LerpFactor: 10
+--- !u!114 &114932932690431582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1458312211705782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7f16d025f6dd94f9040d72b5e5bb78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DB: {fileID: 11400000, guid: 275cee5793328d34389544123a17a007, type: 2}
+  item:
+    name: 
+    _bothHands: 0
+    ID: 0
+    _attributes: 
+    special: 0
+  itemName: 
+  itemTest: 
+  held: 0
