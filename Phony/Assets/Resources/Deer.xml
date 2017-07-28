@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Dialogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <_nodes>
+    <Node>
+      <_ID>0</_ID>
+      <_text>You’re later than usual...</_text>
+      <_name>Mr Deer</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>1</_ID>
+      <_text>Oh, nevermind. I can only get flour this nice imported so I’ll let it go this time.</_text>
+      <_name>Mr Deer</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>2</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>2</_ID>
+      <_text>Thank you, now, please leave.</_text>
+      <_name>Mr Deer</_name>
+      <_reset>3</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>-1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+      <_accomplish>DeliverDeer</_accomplish>
+    </Node>
+    <Node>
+      <_ID>3</_ID>
+      <_text>Do you not have work…?  </_text>
+      <_name>Mr Deer</_name>
+      <_reset>3</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>4</_dest>
+        </dialogueOption>
+        <dialogueOption>
+          <_text>Flour</_text>
+          <_dest>12</_dest>
+          <_req>LookingFlour</_req>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>4</_ID>
+      <_text>I’m sure you’re very busy and don’t have time to waste crowding my store. </_text>
+      <_name>Mr Deer</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text>Goodbye</_text>
+          <_dest>5</_dest>
+        </dialogueOption>
+        <dialogueOption>
+          <_text>Get any new books?</_text>
+          <_dest>6</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>5</_ID>
+      <_text />
+      <_reset>3</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>-1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>6</_ID>
+      <_text>Reindeer and Julia. It’s a tragic tale about betrayal and passion.</_text>
+      <_name>Mr Deer</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>7</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>7</_ID>
+      <_text>Of course, it’s all horribly taboo, a moose and a coffee mug, how absurd.</_text>
+      <_name>Mr Deer</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>8</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>8</_ID>
+      <_text>I’ve never been so disgusted and yet I find myself craving more...%p%p</_text>
+      <_name>Mr Deer</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>9</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>9</_ID>
+      <_text>I’m sorry, that was uncalled for. Forget I said anything. </_text>
+      <_name>Mr Deer</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>10</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>10</_ID>
+      <_text>Run along, now, I’m terribly busy.</_text>
+      <_name>Mr Deer</_name>
+      <_reset>11</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>-1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>11</_ID>
+      <_text>Do you not have work…?  </_text>
+      <_name>Mr Deer</_name>
+      <_reset>11</_reset>
+      <_options>
+        <dialogueOption>
+          <_text>Flour</_text>
+          <_dest>12</_dest>
+          <_req>LookingFlour</_req>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>12</_ID>
+      <_text>I beg your pardon-?</_text>
+      <_name>Mr Deer</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>13</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>13</_ID>
+      <_text>You’re telling me that you want to have the extremely expensive imported super flour which you delivered literally moments ago?</_text>
+      <_name>Mr Deer</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>14</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>14</_ID>
+      <_text>Are you daft? Are you mad?! Tell me! </_text>
+      <_name>Mr Deer</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text>Ms. Teacup's cake....</_text>
+          <_dest>15</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>15</_ID>
+      <_text>Teacup…?%c</_text>
+      <_name>Mr Deer</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>16</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>16</_ID>
+      <_text>I see… Quite the predicament, indeed..Just dreadful. </_text>
+      <_name>Mr Deer</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>17</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>17</_ID>
+      <_text>So be it! </_text>
+      <_name>Mr Deer</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>18</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>18</_ID>
+      <_text>I’ve decided to help you. Take what you need, and be quick about it. It’s rude to keep people waiting.</_text>
+      <_name>Mr Deer</_name>
+      <_reset>19</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>19</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+      <_accomplish>HasFlour</_accomplish>
+    </Node>
+    <Node>
+      <_ID>19</_ID>
+      <_text>I trust your endeavor goes well... </_text>
+      <_name>Mr Deer</_name>
+      <_reset>19</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>-1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+  </_nodes>
+  <_next>0</_next>
+</Dialogue>

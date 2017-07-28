@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Dialogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <_nodes>
+    <Node>
+      <_ID>0</_ID>
+      <_text>The geese here lay very large eggs, it’s quite peculiar…</_text>
+      <_name>Old Man</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>1</_ID>
+      <_text>I guess that means they really like the breadcrumbs I give them, eh! Hohoho! </_text>
+      <_name>Old Man</_name>
+      <_reset>1</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>-1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>2</_ID>
+      <_text>Hmmm? Speak up, I didn’t quite catch what you said...</_text>
+      <_name>Old Man</_name>
+      <_reset>2</_reset>
+      <_options>
+        <dialogueOption>
+          <_text>Fruit</_text>
+          <_dest>3</_dest>
+          <_req>LookingFruit</_req>
+        </dialogueOption>
+        <dialogueOption>
+          <_text>I'm looking for eggs</_text>
+          <_dest>7</_dest>
+          <_req>LookingEggs</_req>
+        </dialogueOption>
+        <dialogueOption>
+          <_text>I didn't say anything</_text>
+          <_dest>9</_dest>
+        </dialogueOption>
+        <dialogueOption>
+          <_text>It's quiet around here..</_text>
+          <_dest>10</_dest>
+          <_req>OldManStory</_req>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>3</_ID>
+      <_text>Fruit eh?</_text>
+      <_name>Old Man</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>4</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>4</_ID>
+      <_text>There are a few bushes about, but they’ve long since shriveled up.</_text>
+      <_name>Old Man</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>5</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>5</_ID>
+      <_text>The man who usually waters them isn’t as young as he used to be.</_text>
+      <_name>Old Man</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>6</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>6</_ID>
+      <_text>I’m sure getting those plants moist will get you good fruit you need in no time!</_text>
+      <_name>Old Man</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>2</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>7</_ID>
+      <_text>The geese around here lay eggs that are very large!</_text>
+      <_name>Old Man</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>8</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>8</_ID>
+      <_text>I’m sure you can find some lying around the park if you look hard enough.</_text>
+      <_name>Old Man</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>2</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>9</_ID>
+      <_text>Oh, I'm sorry! I must be going senile!</_text>
+      <_name>Old Man</_name>
+      <_reset>2</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>-1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>10</_ID>
+      <_text>Quite. A lot’s changed in the past few months.. </_text>
+      <_name>Old Man</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>11</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>11</_ID>
+      <_text>Some folks like that young antler’d fellow like the quiet, but I miss the hustle and bustle that used to come about with the rail station, and of course my friends… </_text>
+      <_name>Old Man</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text>What happened to your friends?</_text>
+          <_dest>12</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>12</_ID>
+      <_text>Oh, nothing you need to fret about. </_text>
+      <_name>Old Man</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>13</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>13</_ID>
+      <_text>People come and people go I suppose…</_text>
+      <_name>Old Man</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>14</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>14</_ID>
+      <_text>They’ve all moved on to bigger and better things, and here I am.</_text>
+      <_name>Old Man</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>15</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>15</_ID>
+      <_text>Sometimes I wonder how different things could’ve been… </_text>
+      <_name>Old Man</_name>
+      <_reset>2</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>-1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+  </_nodes>
+  <_next>0</_next>
+</Dialogue>

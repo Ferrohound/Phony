@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Dialogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <_nodes>
+    <Node>
+      <_ID>0</_ID>
+      <_text>AH! It was an accident-! </_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>1</_ID>
+      <_text>Oh! It’s just you! %pThank goodness!</_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>2</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>2</_ID>
+      <_text>You’ve got to help me…%c</_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>3</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>3</_ID>
+      <_text>I-I was on the way back from the dairy farm a-and I wasn’t paying attention and--</_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>4</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>4</_ID>
+      <_text>You know I’m no good with my hands, please help me fix this..! </_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text>Don't worry.</_text>
+          <_dest>7</_dest>
+        </dialogueOption>
+        <dialogueOption>
+          <_text>Why were you at the dairy farm?</_text>
+          <_dest>5</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>5</_ID>
+      <_text>Ever since Ms Milk Lady moved away, there isn’t anywhere else in town to buy it…</_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>6</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>6</_ID>
+      <_text>I miss her a lot, she gave me lots of ice cream.</_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text>Sit tight.</_text>
+          <_dest>7</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>7</_ID>
+      <_text>Oh! You’ll help me?%p Really?! </_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>8</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>8</_ID>
+      <_text>You’re a real hero! The parts here are all beat up, but I think the junkyard might have some stuff we could put together.</_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>9</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>9</_ID>
+      <_text>Just take a look at the parts; any old thing should be good enough.</_text>
+      <_name>Danny</_name>
+      <_reset>9</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>-1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>10</_ID>
+      <_text>Huh! Good as new! </_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>11</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>11</_ID>
+      <_text>You really helped me out, I don’t know what I would’ve done if I got fined for damages, we’re already pretty behind for the month… </_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>12</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>12</_ID>
+      <_text>If there’s anything I can do for you, please just let me know!</_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>13</_dest>
+          <_req>NotLookingButter</_req>
+        </dialogueOption>
+        <dialogueOption>
+          <_text>Do you have any butter?</_text>
+          <_dest>18</_dest>
+          <_req>LookingButter</_req>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>13</_ID>
+      <_text>Just come see me at the market, okay? Thanks again!</_text>
+      <_name>Danny</_name>
+      <_reset>14</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>-1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>14</_ID>
+      <_text>Hello, hello!</_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>15</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>15</_ID>
+      <_text>Always good to see you! My auntie was mad that I was late, but that’s okay! She would’ve been a lot more mad to see another bill come in.</_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text>Do you have any butter?</_text>
+          <_dest>16</_dest>
+          <_req>LookingButter</_req>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>16</_ID>
+      <_text>Oh? Butter for a cake? I bought some at the farm today! Have some of mine, please! </_text>
+      <_name>Danny</_name>
+      <_reset>17</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>-1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+      <_accomplish>HasButter</_accomplish>
+    </Node>
+    <Node>
+      <_ID>17</_ID>
+      <_text>I hope everything turns out okay! Ms Teacup’s really picky, but I know you can do it! </_text>
+      <_name>Danny</_name>
+      <_reset>17</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>-1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>18</_ID>
+      <_text />
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>-1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+    <Node>
+      <_ID>19</_ID>
+      <_text>Oh?  You’re looking for butter for Ms. Teacup’s cake? Here! Have some of mine, please! I won’t let you go without a reward! </_text>
+      <_name>Danny</_name>
+      <_reset>0</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>20</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+      <_accomplish>HasButter</_accomplish>
+    </Node>
+    <Node>
+      <_ID>20</_ID>
+      <_text>I have to go now, though. My auntie’s going to be really mad if I’m late! %pStop by anytime! </_text>
+      <_name>Danny</_name>
+      <_reset>17</_reset>
+      <_options>
+        <dialogueOption>
+          <_text />
+          <_dest>-1</_dest>
+        </dialogueOption>
+      </_options>
+      <_precalls />
+      <_postcalls />
+    </Node>
+  </_nodes>
+  <_next>0</_next>
+</Dialogue>
