@@ -64,7 +64,10 @@ public class GameItem : MonoBehaviour, Interactable {
 	{
 		//error check
 		if(iDatabase.ExistingItemBank.ContainsKey(name))
+		{
+			Debug.Log("Found "+name+"!");
 			item = iDatabase.ExistingItemBank[name];
+		}
 	}
     /// <summary>
     /// 0 - drop item.

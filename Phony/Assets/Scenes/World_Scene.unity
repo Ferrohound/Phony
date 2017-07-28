@@ -2782,6 +2782,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114241641748959596, guid: 74e43a00e6e84b047a130703056da7c7,
+        type: 2}
+      propertyPath: KillMe.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114241641748959596, guid: 74e43a00e6e84b047a130703056da7c7,
+        type: 2}
+      propertyPath: Effects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114241641748959596, guid: 74e43a00e6e84b047a130703056da7c7,
+        type: 2}
+      propertyPath: Affectors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4440091801794658, guid: 74e43a00e6e84b047a130703056da7c7, type: 2}
       propertyPath: m_LocalPosition.x
       value: 20.407085
@@ -2813,6 +2828,16 @@ Prefab:
     - target: {fileID: 4440091801794658, guid: 74e43a00e6e84b047a130703056da7c7, type: 2}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114241641748959596, guid: 74e43a00e6e84b047a130703056da7c7,
+        type: 2}
+      propertyPath: item._attribute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114241641748959596, guid: 74e43a00e6e84b047a130703056da7c7,
+        type: 2}
+      propertyPath: Affectors.Array.data[0]
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74e43a00e6e84b047a130703056da7c7, type: 2}
@@ -3227,6 +3252,30 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0ca1d7850c97554fbb0e6cb9d260bb5, type: 2}
   m_IsPrefabParent: 0
+--- !u!84 &162844036
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_Width: 640
+  m_Height: 480
+  m_AntiAliasing: 1
+  m_DepthFormat: 2
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_TextureSettings:
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapMode: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &171067029
 GameObject:
   m_ObjectHideFlags: 0
@@ -3502,11 +3551,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -7242,11 +7295,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -7495,11 +7552,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -9030,11 +9091,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -10448,11 +10513,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -11941,6 +12010,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1670604777}
   m_GameObject: {fileID: 430324638}
   m_Mesh: {fileID: 4300094, guid: edfc512a5350a6941952a92f2a0dbd05, type: 3}
+--- !u!1 &434911987 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1165948538382942, guid: eef29bb4ba64d3d46a4f27789d99186d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1442468055}
+--- !u!65 &434911995
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434911987}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &437222890
 Prefab:
   m_ObjectHideFlags: 0
@@ -13513,11 +13599,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -16235,11 +16325,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -17157,11 +17251,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -17390,11 +17488,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -22232,11 +22334,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -24774,6 +24880,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114501135645927656, guid: 3ba2f07fa13b7194199de6f65ee72ce9,
+        type: 2}
+      propertyPath: KillMe.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114501135645927656, guid: 3ba2f07fa13b7194199de6f65ee72ce9,
+        type: 2}
+      propertyPath: Effects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114501135645927656, guid: 3ba2f07fa13b7194199de6f65ee72ce9,
+        type: 2}
+      propertyPath: Affectors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4950916992492784, guid: 3ba2f07fa13b7194199de6f65ee72ce9, type: 2}
       propertyPath: m_LocalPosition.x
       value: 21.614365
@@ -24805,6 +24926,22 @@ Prefab:
     - target: {fileID: 4950916992492784, guid: 3ba2f07fa13b7194199de6f65ee72ce9, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114501135645927656, guid: 3ba2f07fa13b7194199de6f65ee72ce9,
+        type: 2}
+      propertyPath: Effects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1165948538382942, guid: eef29bb4ba64d3d46a4f27789d99186d,
+        type: 2}
+    - target: {fileID: 114501135645927656, guid: 3ba2f07fa13b7194199de6f65ee72ce9,
+        type: 2}
+      propertyPath: Affectors.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114501135645927656, guid: 3ba2f07fa13b7194199de6f65ee72ce9,
+        type: 2}
+      propertyPath: KillMe.Array.data[0]
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ba2f07fa13b7194199de6f65ee72ce9, type: 2}
@@ -25296,11 +25433,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -26486,6 +26627,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4160470665471700, guid: 6262b5b25b8edb24f899d18b16838ad3,
     type: 2}
   m_PrefabInternal: {fileID: 2005703683}
+--- !u!1 &1178278791 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1017034083745706, guid: 3ba2f07fa13b7194199de6f65ee72ce9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1112014650}
+--- !u!65 &1178278799
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1178278791}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.042769007, y: 0.019679068, z: 0.04276893}
+  m_Center: {x: -0.000000024214385, y: 0.009839528, z: -0.000000073574476}
 --- !u!1 &1179442581
 GameObject:
   m_ObjectHideFlags: 0
@@ -29222,11 +29380,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -31717,11 +31879,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -33097,6 +33263,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114270532969214706, guid: eef29bb4ba64d3d46a4f27789d99186d,
+        type: 2}
+      propertyPath: KillMe.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114270532969214706, guid: eef29bb4ba64d3d46a4f27789d99186d,
+        type: 2}
+      propertyPath: Effects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114270532969214706, guid: eef29bb4ba64d3d46a4f27789d99186d,
+        type: 2}
+      propertyPath: Affectors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4217403663220284, guid: eef29bb4ba64d3d46a4f27789d99186d, type: 2}
       propertyPath: m_LocalPosition.x
       value: 21.73
@@ -33107,7 +33288,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4217403663220284, guid: eef29bb4ba64d3d46a4f27789d99186d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 5.184
+      value: 3.253
       objectReference: {fileID: 0}
     - target: {fileID: 4217403663220284, guid: eef29bb4ba64d3d46a4f27789d99186d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -33129,6 +33310,23 @@ Prefab:
       propertyPath: m_RootOrder
       value: 53
       objectReference: {fileID: 0}
+    - target: {fileID: 114270532969214706, guid: eef29bb4ba64d3d46a4f27789d99186d,
+        type: 2}
+      propertyPath: Effects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1797928508335708, guid: 2cdee7d8ffda65d4bb37785d50dd5a8b,
+        type: 2}
+    - target: {fileID: 114270532969214706, guid: eef29bb4ba64d3d46a4f27789d99186d,
+        type: 2}
+      propertyPath: KillMe.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114270532969214706, guid: eef29bb4ba64d3d46a4f27789d99186d,
+        type: 2}
+      propertyPath: DB
+      value: 
+      objectReference: {fileID: 11400000, guid: 275cee5793328d34389544123a17a007,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eef29bb4ba64d3d46a4f27789d99186d, type: 2}
   m_IsPrefabParent: 0
@@ -33328,11 +33526,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -34388,7 +34590,7 @@ Prefab:
         type: 2}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 1502122387}
+      objectReference: {fileID: 162844036}
     - target: {fileID: 20297958655450008, guid: 8ff66e4222e9744c99692907300d1442,
         type: 2}
       propertyPath: m_BackGroundColor.r
@@ -34766,30 +34968,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1501764260}
   m_Mesh: {fileID: 4300198, guid: e25048a54c9b35c419edb2cc91583290, type: 3}
---- !u!84 &1502122387
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 640
-  m_Height: 480
-  m_AntiAliasing: 1
-  m_DepthFormat: 2
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapMode: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!4 &1502309932 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4160470665471700, guid: 6262b5b25b8edb24f899d18b16838ad3,
@@ -37267,11 +37445,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -40018,11 +40200,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -40183,11 +40369,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -43461,11 +43651,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -44857,11 +45051,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -48156,11 +48354,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -48323,11 +48525,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -48646,11 +48852,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 
@@ -48798,6 +49008,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2055472363}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2056935233 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1246220129532052, guid: 645a3819ce30bb248b4079e0c521758b,
+    type: 2}
+  m_PrefabInternal: {fileID: 408755231}
+--- !u!65 &2056935241
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2056935233}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.28137326, y: 0.118081845, z: 0.27102965}
+  m_Center: {x: 0.00017272681, y: 0.05349947, z: -0.0010588467}
 --- !u!1001 &2057679629
 Prefab:
   m_ObjectHideFlags: 0
@@ -50218,11 +50445,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 0}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
   itemName: 
   itemTest: 

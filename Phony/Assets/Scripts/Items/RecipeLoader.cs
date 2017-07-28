@@ -8,7 +8,7 @@ public class RecipeLoader : MonoBehaviour {
 	public ItemDatabase DB;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		if(Recipes.recipeList3 == null)
 			Recipes.Load(path, DB);
 	}

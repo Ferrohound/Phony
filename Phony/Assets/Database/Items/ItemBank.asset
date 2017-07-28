@@ -19,6 +19,7 @@ MonoBehaviour:
       _bothHands: 0
       ID: 0
       _attributes: 02000000
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -27,8 +28,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 1
       _attributes: 00000000
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -37,8 +39,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 2
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -47,8 +50,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 3
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -57,8 +61,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 4
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -67,8 +72,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 5
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -77,8 +83,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 6
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -87,8 +94,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 7
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -97,8 +105,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 8
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -107,8 +116,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 9
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -117,8 +127,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 10
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -127,8 +138,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 11
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -137,8 +149,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 12
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -147,8 +160,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 13
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -157,8 +171,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 14
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -167,8 +182,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 15
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -177,8 +193,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 16
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -187,8 +204,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 17
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -197,8 +215,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 18
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -207,8 +226,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 19
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -217,8 +237,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 20
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -227,8 +248,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 21
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -237,8 +259,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 22
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -247,8 +270,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 23
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -257,8 +281,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 24
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -267,8 +292,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 25
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -277,8 +303,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 26
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -287,8 +314,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 27
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -297,8 +325,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 28
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -307,18 +336,21 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 29
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1904337263163482, guid: 74ffa78914360234da7cfa5246766a64,
+      type: 2}
   - Name: Painted Billboard
     Attribute: 0
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 30
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -327,8 +359,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 31
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -337,8 +370,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 32
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -347,8 +381,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 33
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -357,8 +392,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 34
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -367,8 +403,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 35
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -377,8 +414,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 36
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -387,8 +425,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 37
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -397,8 +436,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 38
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -407,8 +447,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 39
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -417,8 +458,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 40
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -427,8 +469,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 41
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -437,8 +480,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 42
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -447,8 +491,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 43
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -457,8 +502,9 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 44
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
@@ -467,8 +513,22 @@ MonoBehaviour:
     item:
       name: 
       _bothHands: 0
-      ID: 0
+      ID: 45
       _attributes: 
+      _attribute: 0
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 0}
+  - Name: Lighter
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 46
+      _attributes: 
+      _attribute: 0
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 1587955665523794, guid: 6b0fd4a0d1673ec4c8fed7ac97a78db3,
+      type: 2}
+  initialized: 0

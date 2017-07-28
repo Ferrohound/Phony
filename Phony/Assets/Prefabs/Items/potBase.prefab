@@ -40,8 +40,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1681516650020046}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0699727, y: 0.0966, z: -0.155}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 12.491944, y: 1.8002453, z: 4.011444}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -137,13 +137,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 11400000, guid: 275cee5793328d34389544123a17a007, type: 2}
+  Affectors: 
+  Effects: []
+  KillMe: 
   item:
-    name: 
+    name: Teapot Base
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
-  itemName: 
+  itemName: Teapot Base
   itemTest: 
   held: 0
 --- !u!135 &135382849792993674

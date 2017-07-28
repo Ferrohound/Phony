@@ -98,7 +98,7 @@ public class Recipes{
 			
 			if(DB.ExistingItemBank.ContainsKey(i1) && DB.ExistingItemBank.ContainsKey(i2))
 			{
-				//Debug.Log("Bingo! It was " + i1 + " and " + i2);
+				Debug.Log("Bingo! It was " + i1 + " and " + i2);
 				ID1 = DB.ExistingItemBank[i1].ID;
 				ID2 = DB.ExistingItemBank[i2].ID;
 			}
@@ -117,7 +117,10 @@ public class Recipes{
 			//Debug.Log(R._name.Replace("\t", "") + " " + i1+ " " + i2 + " " + ID);
 			
 			if(ID1!=-1)
+			{
+				Debug.Log(R._name+"'s ID is " + ID);
 				recipeList4.Add(ID, R);
+			}
 			
 		}
 		
@@ -163,7 +166,7 @@ public class Recipes{
 		else
 			ID = Pair(b, a);
 		
-		Debug.Log(ID);
+		Debug.Log("Looking for ID... " + ID);
 		
 		if(recipeList4.ContainsKey(ID))
 		{

@@ -292,11 +292,15 @@ public class Interaction : MonoBehaviour {
 		
 		//Ingredients ing = new Ingredients(0, L.itemName, R.itemName);
 		//Recipe result = Recipes.Cook(ing);
-
+		
+		Debug.Log("Combinding ID's " + L.item.ID +" and "+R.item.ID);
 		Recipe result = Recipes.Cook(L.item.ID, R.item.ID);
 		
 		if (result == null)
+		{
+			Debug.Log("Result is null!");
 			return;
+		}
 		
 		Debug.Log(result._name);
 		//do other stuff=================================================TO DO
@@ -307,18 +311,47 @@ public class Interaction : MonoBehaviour {
 		GameObject newItem = GameItem.iDatabase.ItemBank[result._name];
 		
 		//play an animation probably ================================== TO DO
-		
 		//detirmine which items to destroy
-		if(true)
+		if(L.itemName == result._item1)
 		{
-			//destroy the two held items
-			Destroy(left.gameObject);
-			Destroy(right.gameObject);
+			if(result._dst1)
+			{
+				Destroy(L.gameObject);
+				left = null;
+			}
+			if(result._dst2)
+			{
+				Destroy(R.gameObject);
+				right = null;
+			}
+		}
+		else
+		{
+			if(result._dst1)
+			{
+				Destroy(R.gameObject);
+				right = null;
+			}
+			if(result._dst2)
+			{
+				Destroy(L.gameObject);
+				left = null;
+			}
 		}
 		
-		//instantiate the new item and set its parent to the left hand
-		Instantiate(newItem, leftT);
-		left = newItem.transform;
+		//instantiate the new item and set its parent to a free hand
+		if(left == null)
+		{
+			//Instantiate(newItem, FPL);
+			Instantiate(newItem, FPL.position, FPL.rotation);
+			//left = newItem.transform;
+		}
+		else if(right == null)
+		{
+			//Instantiate(newItem, FPR);
+			Instantiate(newItem, FPR.position, FPR.rotation);
+			//right = newItem.transform;
+		}
 		
 		//set bothHands to false
 		bothHands = false;
