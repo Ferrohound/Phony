@@ -19,6 +19,7 @@ public class Recipes{
 	//public static Dictionary<tuple<string, string>, Recipe> recipeList;
 	public static Dictionary<int, Recipe> recipeList2;
 	public static Dictionary<Ingredients, Recipe> recipeList3;
+	public static Dictionary<int, Recipe> recipeList4;
 	/*
 	void Awake()
 	{
@@ -52,8 +53,11 @@ public class Recipes{
 
 	
 	//load the recipeList
-	public static /*Dictionary<Ingredients, Recipe>*/Recipes Load(string Path)
+	public static /*Dictionary<Ingredients, Recipe>*/Recipes Load(string Path, ItemDatabase DB)
 	{
+		if(DB.initialized == false)
+			DB.initialize();
+		
 		TextAsset _xml = Resources.Load<TextAsset>(Path);
 		XmlDocument xmldoc = new XmlDocument();
 		xmldoc.LoadXml(_xml.text);
@@ -67,6 +71,13 @@ public class Recipes{
 		//parse through the recipes, adding them to the hash table
 		
 		recipeList3 = new Dictionary<Ingredients, Recipe>();
+		recipeList4 = new Dictionary<int, Recipe>();
+		
+		string i1;
+		string i2;
+		int ID;
+		int ID1;
+		int ID2;
 		
 		for( int i = 0; i < tmp.recipes.Count ; i++)
 		{
@@ -75,13 +86,40 @@ public class Recipes{
 			Recipe R = tmp.recipes[i];
 			//Debug.Log(R._name.Replace("\t",""));
 			//Debug.Log(R._item1.Replace("\t",""));
-			Ingredients In = new Ingredients(i, R._item1.Replace("\t",""), 
-				R._item2.Replace("\t",""));
+			i1 = R._item1.Replace("\t","");
+			i2 = R._item2.Replace("\t","");
+			i1 = i1.Replace("\n","");
+			i2 = i2.Replace("\n","");
+			
+			Ingredients In = new Ingredients(i, i1, i2);
 			recipeList3.Add(In, R);
+			
+			//Debug.Log(R._name.Replace("\t", "") + " " + i1+ " " + i2);
+			
+			if(DB.ExistingItemBank.ContainsKey(i1) && DB.ExistingItemBank.ContainsKey(i2))
+			{
+				Debug.Log("Bingo! It was " + i1 + " and " + i2);
+				ID1 = DB.ExistingItemBank[i1].ID;
+				ID2 = DB.ExistingItemBank[i2].ID;
+			}
+			else
+			{
+				ID1 = -1;
+				ID2 = 0;
+				Debug.Log("damn you " + i1 + " " + i2);
+			}
+			
+			if(ID1<ID2)
+				ID = Pair(ID1, ID2);
+			else
+				ID = Pair(ID2, ID1);
+			
+			//Debug.Log(R._name.Replace("\t", "") + " " + i1+ " " + i2 + " " + ID);
+			
+			if(ID1!=-1)
+				recipeList4.Add(ID, R);
+			
 		}
-		
-		Ingredients AB = new Ingredients(0, "Teapot Lid", "Teapot Base");
-		Recipe C2 = Cook(AB);
 		
 		return tmp;
 	}
@@ -89,7 +127,7 @@ public class Recipes{
 	//pairing function, currently not in use
 	public static int Pair(int a, int b)
 	{
-		return (1/2 * (a+b) * (a+b+1)) + (b+a);
+		return (1/2 * (a+b) * (a+b+1)) + b;
 	}
 	
 	//return the recipe, since we don't have references to the game objects?
@@ -100,6 +138,37 @@ public class Recipes{
 		{
 			Debug.Log("Found the item!");
 			return recipeList3[i];
+		}
+		Debug.Log("Couldn't Find!");
+		return null;
+	}
+	
+	public static Recipe Cook(int i)
+	{
+		if(recipeList4.ContainsKey(i))
+		{
+			Debug.Log("Found the item!");
+			return recipeList4[i];
+		}
+		Debug.Log("Couldn't Find!");
+		return null;
+	}
+	
+	public static Recipe Cook(int a, int b)
+	{
+		int ID;
+		
+		if(a<b)
+			ID = Pair(a, b);
+		else
+			ID = Pair(b, a);
+		
+		Debug.Log(ID);
+		
+		if(recipeList4.ContainsKey(ID))
+		{
+			Debug.Log("Found the item!");
+			return recipeList4[ID];
 		}
 		Debug.Log("Couldn't Find!");
 		return null;

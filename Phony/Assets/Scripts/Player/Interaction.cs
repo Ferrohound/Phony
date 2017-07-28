@@ -290,8 +290,10 @@ public class Interaction : MonoBehaviour {
 		
 		Debug.Log("Combining " + L.itemName + " and " + R.itemName);
 		
-		Ingredients ing = new Ingredients(0, L.itemName, R.itemName);
-		Recipe result = Recipes.Cook(ing);
+		//Ingredients ing = new Ingredients(0, L.itemName, R.itemName);
+		//Recipe result = Recipes.Cook(ing);
+
+		Recipe result = Recipes.Cook(L.item.ID, R.item.ID);
 		
 		if (result == null)
 			return;

@@ -10,6 +10,7 @@ public class ItemDatabase : ScriptableObject
 	//need a key of items instead
 	public /*static */Dictionary<string, GameObject> ItemBank = new Dictionary<string, GameObject>();
 	public Dictionary<string, Item> ExistingItemBank = new Dictionary<string, Item>();
+	public bool initialized = false;
 	
 	public void setKey(string key, GameObject value)
 	{
@@ -21,13 +22,20 @@ public class ItemDatabase : ScriptableObject
 		ExistingItemBank[key] = item;
 	}
 	
-	void Awake()
+	public void initialize()
 	{
 		//initialize the database upon game start
 		for(int i = 0; i< items.Count; i++)
 		{
 			setKey(items[i].Name, items[i].gameObject);
 			setKey(items[i].Name, items[i].item);
+			items[i].item.ID = i;
+			//Debug.Log(items[i].Name);
 		}
+	}
+	
+	void Awake()
+	{
+		
 	}
 }
