@@ -73,9 +73,15 @@ public class Recipes{
 			//create an ingredient for each recipe's ingredients and add that to
 			//recipeList3
 			Recipe R = tmp.recipes[i];
-			Ingredients In = new Ingredients(i, R._item1, R._item2);
-			recipeList3[In] = R;
+			//Debug.Log(R._name.Replace("\t",""));
+			//Debug.Log(R._item1.Replace("\t",""));
+			Ingredients In = new Ingredients(i, R._item1.Replace("\t",""), 
+				R._item2.Replace("\t",""));
+			recipeList3.Add(In, R);
 		}
+		
+		Ingredients AB = new Ingredients(0, "Teapot Lid", "Teapot Base");
+		Recipe C2 = Cook(AB);
 		
 		return tmp;
 	}

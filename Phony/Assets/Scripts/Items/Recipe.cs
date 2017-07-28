@@ -72,6 +72,9 @@ public class Ingredients: System.IEquatable<Ingredients>, IEqualityComparer<Ingr
 		return x.Equals(y);
 	}
 	
+	//options => directly use the .GetHashCode() as the key to the dictionary
+	//and fuck the ingredient class I guess.
+	//option 2 is http://www.tutorialsteacher.com/csharp/csharp-dictionary
 	public bool Equals(Ingredients other)
 	{
 		Debug.Log(i1 + " " + i2);
@@ -85,6 +88,7 @@ public class Ingredients: System.IEquatable<Ingredients>, IEqualityComparer<Ingr
 	//to allow use in dictionary
 	public override int GetHashCode()
 	{
+		Debug.Log("test");
 		//https://stackoverflow.com/questions/13019307/make-a-unique-hash-out-of-two-strings
 		//Xor for unique result
 		//if the two strings are equal, this might be a problem
@@ -95,6 +99,7 @@ public class Ingredients: System.IEquatable<Ingredients>, IEqualityComparer<Ingr
 	//to allow use in dictionary
 	public int GetHashCode(Ingredients i)
 	{
+		Debug.Log("wat");
 		return i.GetHashCode();
 	}
 }

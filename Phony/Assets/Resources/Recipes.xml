@@ -22,13 +22,13 @@
 				Teapot
 			</_name>
 			<_item1>
-				Teapot Base
+				Teapot Lid
 			</_item1>
 			<_dst1>
 				true
 			</_dst1>
 			<_item2>
-				Teapot Lid
+				Teapot Base
 			</_item2>
 			<_dst2>
 				true

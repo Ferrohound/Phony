@@ -288,7 +288,9 @@ public class Interaction : MonoBehaviour {
 		GameItem L = left.GetComponent<GameItem>();
 		GameItem R = right.GetComponent<GameItem>();
 		
-		Ingredients ing = new Ingredients(0, L.name, R.name);
+		Debug.Log("Combining " + L.itemName + " and " + R.itemName);
+		
+		Ingredients ing = new Ingredients(0, L.itemName, R.itemName);
 		Recipe result = Recipes.Cook(ing);
 		
 		if (result == null)
