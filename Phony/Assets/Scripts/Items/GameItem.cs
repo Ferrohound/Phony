@@ -126,13 +126,11 @@ public class GameItem : MonoBehaviour, Interactable {
 		//check if the other object is a gameItem
 		if(other == null)
 			return;
-		Debug.Log("testing");
 		if(other.item == null)
 			return;
 		
 		Ingredients ing = new Ingredients( 0, item.name, other.item.name);
 		Recipe result = Recipes.Cook(ing);
-		Debug.Log("testing");
 		//no recipe for this exists, do it via attribute
 		if (result == null)
 		{
@@ -157,7 +155,6 @@ public class GameItem : MonoBehaviour, Interactable {
 	//check the item's attribute, spawn corresponding things, delete, etc..
 	void AttributeCollision(GameItem other)
 	{
-		Debug.Log("Kaboom?");
 		if(!GOHash.ContainsKey(other.item._attribute))
 			return;
 		

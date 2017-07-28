@@ -88,7 +88,6 @@ public class Ingredients: System.IEquatable<Ingredients>, IEqualityComparer<Ingr
 	//to allow use in dictionary
 	public override int GetHashCode()
 	{
-		Debug.Log("test");
 		//https://stackoverflow.com/questions/13019307/make-a-unique-hash-out-of-two-strings
 		//Xor for unique result
 		//if the two strings are equal, this might be a problem
