@@ -30,7 +30,7 @@ public class NPCWander : MonoBehaviour {
 	// Update is called once per frame
 	//play animation if velocity is 0, otherwise don't
 	void Update () {
-		animator.SetFloat("MoveSpeed", Vector3.Magnitude(nav.velocity)/nav.speed);	
+		//animator.SetFloat("MoveSpeed", Vector3.Magnitude(nav.velocity)/nav.speed);	
 		//Debug.Log(Vector3.Magnitude(nav.velocity));
 		//Debug.Log("SHT");
 		
@@ -63,6 +63,11 @@ public class NPCWander : MonoBehaviour {
 			//nav.Stop();
             //use isStopped instead
 		}
+	}
+	
+	void FixedUpdate()
+	{
+		animator.SetFloat("MoveSpeed", (float) Vector3.Magnitude(nav.velocity));
 	}
 	
 	IEnumerator Wander()
@@ -98,6 +103,7 @@ public class NPCWander : MonoBehaviour {
 		
 	}
 	
+	//rewrite this mess
 	IEnumerator movePos(Transform target)
 	{
 		curTarget = target;
@@ -111,7 +117,6 @@ public class NPCWander : MonoBehaviour {
 			{
 				moveTo(curTarget);
 				distance = Vector3.Distance (curTarget.position, transform.position);
-				animator.SetFloat("MoveSpeed", (float) Vector3.Magnitude(nav.velocity));
 				//Debug.Log(Vector3.Magnitude(nav.velocity));
 			}
 			yield return null;
