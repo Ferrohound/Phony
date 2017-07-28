@@ -25,6 +25,7 @@ public class Item{
 	//inner elements of the attribute
 	[XmlElement("_attributes")]
 	public List<Attributes> _attributes;
+	public Attributes _attribute;
 	
 	[XmlElement("_special")]
 	public bool special;

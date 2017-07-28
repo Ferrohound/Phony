@@ -98,7 +98,7 @@ public class Recipes{
 			
 			if(DB.ExistingItemBank.ContainsKey(i1) && DB.ExistingItemBank.ContainsKey(i2))
 			{
-				Debug.Log("Bingo! It was " + i1 + " and " + i2);
+				//Debug.Log("Bingo! It was " + i1 + " and " + i2);
 				ID1 = DB.ExistingItemBank[i1].ID;
 				ID2 = DB.ExistingItemBank[i2].ID;
 			}
@@ -106,7 +106,7 @@ public class Recipes{
 			{
 				ID1 = -1;
 				ID2 = 0;
-				Debug.Log("damn you " + i1 + " " + i2);
+				//Debug.Log("damn you " + i1 + " " + i2);
 			}
 			
 			if(ID1<ID2)

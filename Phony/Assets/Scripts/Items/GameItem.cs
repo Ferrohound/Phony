@@ -14,6 +14,13 @@ public class GameItem : MonoBehaviour, Interactable {
 	//need to initialize when the game starts, ideally on the start screen
 	public static ItemDatabase iDatabase;
 	
+	Dictionary<Item.Attributes, GameObject> GOHash;
+	Dictionary<Item.Attributes, bool> DeathHash;
+	
+	public Item.Attributes[] Affectors;
+	public List<GameObject> Effects;
+	public bool[] KillMe;
+	
     public Item item;
 	public string itemName;
 	public string itemTest;
@@ -21,6 +28,17 @@ public class GameItem : MonoBehaviour, Interactable {
     private Rigidbody rb;
     private Collider col;
     void Start() {
+		
+		//hash tables of what attributes affect this object, what to spawn and 
+		//whether or not to self-destruct afterwards
+		GOHash = new Dictionary<Item.Attributes, GameObject>();
+		DeathHash = new Dictionary<Item.Attributes, bool>();
+		
+		for(int i=0; i<Effects.Count; i++)
+		{
+			GOHash[Affectors[i]] = Effects[i];
+			DeathHash[Affectors[i]] = KillMe[i];
+		}
 		
 		if(iDatabase == null)
 			iDatabase = DB;
@@ -108,13 +126,13 @@ public class GameItem : MonoBehaviour, Interactable {
 		//check if the other object is a gameItem
 		if(other == null)
 			return;
-		
+		Debug.Log("testing");
 		if(other.item == null)
 			return;
 		
 		Ingredients ing = new Ingredients( 0, item.name, other.item.name);
 		Recipe result = Recipes.Cook(ing);
-		
+		Debug.Log("testing");
 		//no recipe for this exists, do it via attribute
 		if (result == null)
 		{
@@ -139,6 +157,12 @@ public class GameItem : MonoBehaviour, Interactable {
 	//check the item's attribute, spawn corresponding things, delete, etc..
 	void AttributeCollision(GameItem other)
 	{
+		Debug.Log("Kaboom?");
+		if(!GOHash.ContainsKey(other.item._attribute))
+			return;
 		
+		Instantiate(GOHash[other.item._attribute], transform.position, transform.rotation);
+		if(DeathHash[other.item._attribute])
+			Destroy(this.gameObject);
 	}
 }
