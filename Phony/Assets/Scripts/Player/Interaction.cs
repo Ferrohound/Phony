@@ -11,7 +11,7 @@ public class Interaction : MonoBehaviour {
     public Transform leftT, rightT, FPL, FPR; //locations of left and right hand. Use hands in rig for this
     public Transform left, right;   //items in left and right hand
 
-    public bool bothHands; //whether both hands are being used for an item
+    public bool bothHands;          //whether both hands are being used for an item
 	
     public int simuPoints;          //Number of points to simulate
     public float simuDelta;         //Time in which to accelerate into future
@@ -26,7 +26,7 @@ public class Interaction : MonoBehaviour {
 	//Components
     private LineRenderer lr;
     private PlayerController pc;
-    private Transform cam;
+    public Transform cam;
     private World w;
 
     //FOR INTERNAL CALCULATION
@@ -35,9 +35,11 @@ public class Interaction : MonoBehaviour {
     private Collider[] collt;
     private int callFlag;           //so update can call functions in fixedupdate
     private Vector3[] renderPoints;
-    private bool leftDown, rightDown, fDown, f2Down, fUp, f2Up;
+    private bool fDown, f2Down, fHold, f2Hold, fUp, f2Up;
+    private float sT, sT2, hT; //start time, hold time. Using for determining when to throw
+    private bool lP, rP; //whether an item was picked up this time
 
-	void Start () {
+    void Start () {
         InitializeVariables();
 
 	}
@@ -53,119 +55,96 @@ public class Interaction : MonoBehaviour {
 		FPR.position = (cam.position/* + new Vector3(3, 0, 0)*/) 
 			+ cam.transform.forward * carryDistance + RD * 0.5f;
 		//Debug.Log(cam.forward);
-        //dropping items
-        leftDown = CrossPlatformInputManager.GetButtonDown("Left");
-        rightDown = CrossPlatformInputManager.GetButtonDown("Right");
-        fDown = CrossPlatformInputManager.GetButton("Fire1");
-        f2Down = CrossPlatformInputManager.GetButton("Fire2");
+
+        fDown = CrossPlatformInputManager.GetButtonDown("Fire1");
+        f2Down = CrossPlatformInputManager.GetButtonDown("Fire2");
+        fHold = CrossPlatformInputManager.GetButton("Fire1");
+        f2Hold = CrossPlatformInputManager.GetButton("Fire2");
 		fUp = CrossPlatformInputManager.GetButtonUp("Fire1");
 		f2Up = CrossPlatformInputManager.GetButtonUp("Fire2");
-		
-		//Debug.Log(fDown);
-		//Debug.Log(f2Down);
-		
-		if(left!=null && right!=null)
+
+        if (fDown) { sT = Time.time; }
+        if (f2Down) { sT2 = Time.time; }
+
+		if(left != null && right != null) //if objects are held in both hands
 			HUD.Combine.SetActive(true);
 		
-        if (left != null && leftDown){
-			//turn off left throwing UI
-			//and combine UI if right isn't null
-			//probably make a function for this later
-			//====================================================================TO DO
-			HUD.LeftThrow.SetActive(false);
-			HUD.Combine.SetActive(false);
-			
-		    StartCoroutine(Drop (0));
-        } else if (right != null && rightDown) {
-			//turn off right throw UI
-			//and combine UI if right isn't null
-			//====================================================================TO DO
-			HUD.RightThrow.SetActive(false);
-			HUD.Combine.SetActive(false);
-			
-			StartCoroutine (Drop (1));
-        }
 		if (pc.Perspective == 0) {//first person
-            if (left != null && fDown && !fUp && !f2Down) {//Left throw is being charged
+            if (left != null && fHold && (Time.time - sT > hT)) {//Left throw is being charged
                 lr.enabled = true;
                 UpdateThrowSpeed();
-                //ThrowPrediction(leftT.position, cam.forward);
                 ThrowPrediction(FPL.position, cam.forward);
-            } else if (right != null && f2Down && !f2Up && !fDown) {//Right throw is being charged
+            } else if (right != null && f2Hold && (Time.time - sT2 > hT)) { //Right throw is being charged
                 lr.enabled = true;
                 UpdateThrowSpeed();
-                //ThrowPrediction(rightT.position, cam.forward);
                 ThrowPrediction(FPR.position, cam.forward);
-            } 
-			else if(right!=null && left!= null && f2Down && fDown)
-			{
-				Debug.Log("They're gonna combine!");
+            } else if(right != null && left!= null && CrossPlatformInputManager.GetButtonDown("Combine")) { //WILL HAVE TO CHANGE
 				Combine();
-			}
-			else if (left != null && !fDown && fUp) {//release left throw
+			} else if (left != null && fUp && (Time.time - sT > hT)) {//release left throw
 				//turn off left throwing UI
 				//and combine UI if right isn't null
 				//====================================================================TO DO
-				HUD.LeftThrow.SetActive(false);
-				HUD.Combine.SetActive(false);
-				
+                HUD.LeftThrow.SetActive(false);
+                HUD.Combine.SetActive(false);
+
                 lr.enabled = false;
                 callFlag = 0;//call throw in fixed update
-            } else if (right != null && !f2Down && f2Up) {//release right throw
+            } else if(left != null && fUp && !lP) { //drop
+                HUD.LeftThrow.SetActive(false);
+                HUD.Combine.SetActive(false);
+                StartCoroutine(Drop(0));
+            } else if (right != null && f2Up && (Time.time - sT2 > hT)) {//release right throw
 				//turn off right throw UI
 				//and combine UI if right isn't null
 				//====================================================================TO DO
-				HUD.RightThrow.SetActive(false);
-				HUD.Combine.SetActive(false);
-				
+                HUD.RightThrow.SetActive(false);
+                HUD.Combine.SetActive(false);
                 lr.enabled = false;
                 callFlag = 1;//call throw in fixed update
+            } else if (right != null && f2Up && !rP){//drop
+                HUD.RightThrow.SetActive(false);
+                HUD.Combine.SetActive(false);
+                StartCoroutine(Drop(1));
             } else if(cam!=null && Physics.Raycast(cam.position, cam.forward, out rhit, 3.0f)){//figure out whether there is an interactable in front of you
                 if (rhit.transform.GetComponent<GameItem>() != null){
-                    //do both hands stuff checking before anything else here
-
-
-                    if (leftDown && left == null){//pick up item
+                    if (fDown && left == null){//pick up item
 						//turn off left holding UI element and on leftThrow
 						//==============================================================TO DO
 						HUD.LeftPickUp.SetActive(false);
 						HUD.LeftThrow.SetActive(true);
-						if(right != null)
-							HUD.Combine.SetActive(false);
-						
+                        lP = true;
+                        if (right != null){
+                            HUD.Combine.SetActive(false);
+                        }
                         left = rhit.transform;
                         left.GetComponent<GameItem>().Interact(pc, 1);//ignore collisions
-                    }
-                    else if (rightDown && right == null){//pick up item
+                    } else if (f2Down && right == null){//pick up item
 						//turn off right holding UI and on rightThrow
 						//==============================================================TO DO
 						HUD.RightPickUp.SetActive(false);
 						HUD.RightThrow.SetActive(true);
+                        rP = true;
 						if(left != null)
 							HUD.Combine.SetActive(false);
 						
                         right = rhit.transform;
-                        right.GetComponent<GameItem>().Interact(pc, 2);
-                    } else 
-					{//update ui
+                        right.GetComponent<GameItem>().Interact(pc, 2); //ignore collisions
+                    } else {//update ui
                         //like maybe highlight the item or have stuff pop up
 						//if left is null
-						if(left == null)
-						{
+						if(left == null){
 							HUD.LeftPickUp.SetActive(true);
 						}
-						if(right == null)
-						{
+						if(right == null){
 							HUD.RightPickUp.SetActive(true);
 						}
                     }
-                } else if ((leftDown || rightDown) && rhit.transform.GetComponent<Interactable>() != null) {
+                } else if ((fDown || f2Down) && rhit.transform.GetComponent<Interactable>() != null) {
                     rhit.transform.GetComponent<Interactable>().Interact(pc, 0); //default behaviour
                 }
             }
 			//otherwise, turn off UI stuff =============================================TO DO
-			else
-			{
+			else{
 				HUD.LeftPickUp.SetActive(false);
 				HUD.RightPickUp.SetActive(false);
 			}
@@ -179,7 +158,10 @@ public class Interaction : MonoBehaviour {
                 right.GetComponent<GameItem>().Interact(pc, 2);
             }
         }
-	}
+
+        if (fUp && lP) lP = false;
+        if (f2Up && rP) rP = false;
+    }
 
     void FixedUpdate() {
         switch (callFlag) { 
@@ -216,12 +198,13 @@ public class Interaction : MonoBehaviour {
         w = GameObject.FindGameObjectWithTag("CONTROL").GetComponent<World>();
      
         callFlag = -1;
-		if(lr!=null)
-		{
+		if(lr!=null){
 			lr.enabled = false;
 			lr.positionCount = simuPoints;
 			lr.alignment = LineAlignment.View;
 		}
+
+        hT = 1.0f;
     }
 
     private void CheckItemsNearby() {
@@ -287,17 +270,13 @@ public class Interaction : MonoBehaviour {
 	void Combine(){
 		GameItem L = left.GetComponent<GameItem>();
 		GameItem R = right.GetComponent<GameItem>();
-		
 		Debug.Log("Combining " + L.itemName + " and " + R.itemName);
+        Debug.Log("Combining ID's " + L.item.ID + " and " + R.item.ID);
+        //Ingredients ing = new Ingredients(0, L.itemName, R.itemName);
+        //Recipe result = Recipes.Cook(ing);
+        Recipe result = Recipes.Cook(L.item.ID, R.item.ID);
 		
-		//Ingredients ing = new Ingredients(0, L.itemName, R.itemName);
-		//Recipe result = Recipes.Cook(ing);
-		
-		Debug.Log("Combinding ID's " + L.item.ID +" and "+R.item.ID);
-		Recipe result = Recipes.Cook(L.item.ID, R.item.ID);
-		
-		if (result == null)
-		{
+		if (result == null){
 			Debug.Log("Result is null!");
 			return;
 		}
@@ -312,42 +291,32 @@ public class Interaction : MonoBehaviour {
 		
 		//play an animation probably ================================== TO DO
 		//detirmine which items to destroy
-		if(L.itemName == result._item1)
-		{
-			if(result._dst1)
-			{
+		if(L.itemName == result._item1){
+			if(result._dst1){
 				Destroy(L.gameObject);
 				left = null;
 			}
-			if(result._dst2)
-			{
+			if(result._dst2){
 				Destroy(R.gameObject);
 				right = null;
 			}
-		}
-		else
-		{
-			if(result._dst1)
-			{
+		}else{
+			if(result._dst1){
 				Destroy(R.gameObject);
 				right = null;
 			}
-			if(result._dst2)
-			{
+			if(result._dst2){
 				Destroy(L.gameObject);
 				left = null;
 			}
 		}
 		
 		//instantiate the new item and set its parent to a free hand
-		if(left == null)
-		{
+		if(left == null){
 			//Instantiate(newItem, FPL);
 			Instantiate(newItem, FPL.position, FPL.rotation);
 			//left = newItem.transform;
-		}
-		else if(right == null)
-		{
+		} else if(right == null){
 			//Instantiate(newItem, FPR);
 			Instantiate(newItem, FPR.position, FPR.rotation);
 			//right = newItem.transform;
@@ -355,12 +324,9 @@ public class Interaction : MonoBehaviour {
 		
 		//set bothHands to false
 		bothHands = false;
-		
 	}
 
-
 	//dropping item. calls game item scrip to turn on colider after 0.3 secs
-
 	private IEnumerator Drop(int item) {
 		yield return new WaitForSeconds(0.3f);
 		if (item == 0) {

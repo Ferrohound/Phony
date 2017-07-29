@@ -36,8 +36,7 @@ public class Recipes{
 		
 	}*/
 	
-	public void Test()
-	{
+	public void Test(){
 		recipeList3 = new Dictionary<Ingredients, Recipe>();
 		
 		Ingredients AB = new Ingredients(0, "A", "B");
@@ -53,8 +52,7 @@ public class Recipes{
 
 	
 	//load the recipeList
-	public static /*Dictionary<Ingredients, Recipe>*/Recipes Load(string Path, ItemDatabase DB)
-	{
+	public static /*Dictionary<Ingredients, Recipe>*/Recipes Load(string Path, ItemDatabase DB){
 		if(DB.initialized == false)
 			DB.initialize();
 		
@@ -79,8 +77,7 @@ public class Recipes{
 		int ID1;
 		int ID2;
 		
-		for( int i = 0; i < tmp.recipes.Count ; i++)
-		{
+		for( int i = 0; i < tmp.recipes.Count ; i++){
 			//create an ingredient for each recipe's ingredients and add that to
 			//recipeList3
 			Recipe R = tmp.recipes[i];
@@ -101,9 +98,7 @@ public class Recipes{
 				Debug.Log("Bingo! It was " + i1 + " and " + i2);
 				ID1 = DB.ExistingItemBank[i1].ID;
 				ID2 = DB.ExistingItemBank[i2].ID;
-			}
-			else
-			{
+			}else{
 				ID1 = -1;
 				ID2 = 0;
 				//Debug.Log("damn you " + i1 + " " + i2);
@@ -116,29 +111,24 @@ public class Recipes{
 			
 			//Debug.Log(R._name.Replace("\t", "") + " " + i1+ " " + i2 + " " + ID);
 			
-			if(ID1!=-1)
-			{
+			if(ID1!=-1){
 				Debug.Log(R._name+"'s ID is " + ID);
 				recipeList4.Add(ID, R);
 			}
 			
 		}
-		
 		return tmp;
 	}
 	
 	//pairing function, currently not in use
-	public static int Pair(int a, int b)
-	{
+	public static int Pair(int a, int b){
 		return (1/2 * (a+b) * (a+b+1)) + b;
 	}
 	
 	//return the recipe, since we don't have references to the game objects?
 	//or maybe we do, who knows
-	public static Recipe Cook(Ingredients i)
-	{
-		if(recipeList3.ContainsKey(i))
-		{
+	public static Recipe Cook(Ingredients i){
+		if(recipeList3.ContainsKey(i)){
 			Debug.Log("Found the item!");
 			return recipeList3[i];
 		}
@@ -146,10 +136,8 @@ public class Recipes{
 		return null;
 	}
 	
-	public static Recipe Cook(int i)
-	{
-		if(recipeList4.ContainsKey(i))
-		{
+	public static Recipe Cook(int i){
+		if(recipeList4.ContainsKey(i)){
 			Debug.Log("Found the item!");
 			return recipeList4[i];
 		}
@@ -157,8 +145,7 @@ public class Recipes{
 		return null;
 	}
 	
-	public static Recipe Cook(int a, int b)
-	{
+	public static Recipe Cook(int a, int b){
 		int ID;
 		
 		if(a<b)
@@ -178,8 +165,7 @@ public class Recipes{
 	}
 	
 	//return a game object for the corresponding items via the hash table
-	public static GameObject Cook(Item i1, Item i2)
-	{
+	public static GameObject Cook(Item i1, Item i2){
 		//use pairing function as key instead
 		//&(a, b) = 1/2(a+b)(a+b+1) + b
 		//Infinite hotel construction?
