@@ -341,7 +341,7 @@ MonoBehaviour:
       _attribute: 0
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 1904337263163482, guid: 74ffa78914360234da7cfa5246766a64,
+    gameObject: {fileID: 1546330556800590, guid: 74ffa78914360234da7cfa5246766a64,
       type: 2}
   - Name: Painted Billboard
     Attribute: 0
