@@ -26,7 +26,7 @@ public class GameItem : MonoBehaviour, Interactable {
 	public string itemTest;
     public bool held; //used for trigger checking in 3d person
     private Rigidbody rb;
-    private Collider col;
+    private List<Collider> cols;
 	bool initialized = false;
 	
     void Start() {
@@ -51,7 +51,7 @@ public class GameItem : MonoBehaviour, Interactable {
 			iDatabase = DB;
 		
         rb = GetComponent<Rigidbody>();
-        col = GetComponent<Collider>();
+        cols = new List<Collider>(GetComponents<Collider>());
         held = false;
 		//load item from database via name
 		LoadItem(itemName);
@@ -89,14 +89,19 @@ public class GameItem : MonoBehaviour, Interactable {
         switch (flag) { 
 		case 0:
             rb.isKinematic = false;
-	        Physics.IgnoreCollision(col, pc.m_Capsule, false);
+			for(int i = 0; i<cols.Count; i++)
+			{
+				Physics.IgnoreCollision(cols[i], pc.m_Capsule, false);
+			}
             transform.SetParent(null);
             held = false;
             break;
 		case 1:
             rb.isKinematic = true;
-			col = GetComponent<Collider>(); 
-			Physics.IgnoreCollision (col, pc.m_Capsule, true);
+			for(int i=0; i<cols.Count;i++)
+			{
+				Physics.IgnoreCollision (cols[i], pc.m_Capsule, true);
+			}
 			//1st person mode
 			if(pc.Perspective == 0){
 				transform.SetParent(pc.m_inter.FPL);
@@ -108,7 +113,10 @@ public class GameItem : MonoBehaviour, Interactable {
             break;
         case 2:
             rb.isKinematic = true;
-			Physics.IgnoreCollision (col, pc.m_Capsule, true);			
+			for(int i=0; i<cols.Count;i++)
+			{
+				Physics.IgnoreCollision (cols[i], pc.m_Capsule, true);		
+			}			
 			//1st person
 			if(pc.Perspective == 0){
 				transform.SetParent(pc.m_inter.FPR);
