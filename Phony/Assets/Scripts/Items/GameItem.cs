@@ -27,8 +27,15 @@ public class GameItem : MonoBehaviour, Interactable {
     public bool held; //used for trigger checking in 3d person
     private Rigidbody rb;
     private Collider col;
+	bool initialized = false;
+	
     void Start() {
-		
+		if(!initialized)
+			Initialize();
+    }
+	
+	public void Initialize()
+	{
 		//hash tables of what attributes affect this object, what to spawn and 
 		//whether or not to self-destruct afterwards
 		GOHash = new Dictionary<Item.Attributes, GameObject>();
@@ -48,7 +55,9 @@ public class GameItem : MonoBehaviour, Interactable {
         held = false;
 		//load item from database via name
 		LoadItem(itemName);
-    }
+		initialized = true;
+	}
+	
     void FixedUpdate() { 
         
     }
@@ -86,6 +95,7 @@ public class GameItem : MonoBehaviour, Interactable {
             break;
 		case 1:
             rb.isKinematic = true;
+			col = GetComponent<Collider>(); 
 			Physics.IgnoreCollision (col, pc.m_Capsule, true);
 			//1st person mode
 			if(pc.Perspective == 0){

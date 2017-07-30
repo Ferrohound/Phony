@@ -314,12 +314,17 @@ public class Interaction : MonoBehaviour {
 		//instantiate the new item and set its parent to a free hand
 		if(left == null){
 			//Instantiate(newItem, FPL);
-			Instantiate(newItem, FPL.position, FPL.rotation);
-			//left = newItem.transform;
+			GameObject actualItem = Instantiate(newItem, FPL.position, FPL.rotation);
+			left = actualItem.transform;
+			GameItem LI = left.GetComponent<GameItem>();
+			LI.Initialize();
+			LI.Interact(pc, 1);//ignore collisions
 		} else if(right == null){
 			//Instantiate(newItem, FPR);
-			Instantiate(newItem, FPR.position, FPR.rotation);
-			//right = newItem.transform;
+			GameObject actualItem = Instantiate(newItem, FPR.position, FPR.rotation);
+			right = actualItem.transform;
+			GameItem RI = right.GetComponent<GameItem>();
+			RI.Interact(pc, 1);//ignore collisions
 		}
 		
 		//set bothHands to false
