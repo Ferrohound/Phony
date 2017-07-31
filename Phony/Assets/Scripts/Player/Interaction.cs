@@ -86,10 +86,12 @@ public class Interaction : MonoBehaviour {
 				//====================================================================TO DO
                 HUD.LeftThrow.SetActive(false);
                 HUD.Combine.SetActive(false);
+				bothHands = false;
 
                 lr.enabled = false;
                 callFlag = 0;//call throw in fixed update
             } else if(left != null && fUp && !lP) { //drop
+				bothHands = false;
                 HUD.LeftThrow.SetActive(false);
                 HUD.Combine.SetActive(false);
                 StartCoroutine(Drop(0));
@@ -97,11 +99,13 @@ public class Interaction : MonoBehaviour {
 				//turn off right throw UI
 				//and combine UI if right isn't null
 				//====================================================================TO DO
+				bothHands = false;
                 HUD.RightThrow.SetActive(false);
                 HUD.Combine.SetActive(false);
                 lr.enabled = false;
                 callFlag = 1;//call throw in fixed update
             } else if (right != null && f2Up && !rP){//drop
+				bothHands = false;
                 HUD.RightThrow.SetActive(false);
                 HUD.Combine.SetActive(false);
                 StartCoroutine(Drop(1));
@@ -113,9 +117,13 @@ public class Interaction : MonoBehaviour {
 						HUD.LeftPickUp.SetActive(false);
 						HUD.LeftThrow.SetActive(true);
                         lP = true;
-                        if (right != null){
+                        if (right == null){
                             HUD.Combine.SetActive(false);
                         }
+						else
+						{
+							bothHands = true;
+						}
                         left = rhit.transform;
                         left.GetComponent<GameItem>().Interact(pc, 1);//ignore collisions
                     } else if (f2Down && right == null){//pick up item
@@ -124,9 +132,10 @@ public class Interaction : MonoBehaviour {
 						HUD.RightPickUp.SetActive(false);
 						HUD.RightThrow.SetActive(true);
                         rP = true;
-						if(left != null)
+						if(left == null)
 							HUD.Combine.SetActive(false);
-						
+						else
+							bothHands = true;
                         right = rhit.transform;
                         right.GetComponent<GameItem>().Interact(pc, 2); //ignore collisions
                     } else {//update ui
@@ -134,9 +143,11 @@ public class Interaction : MonoBehaviour {
 						//if left is null
 						if(left == null){
 							HUD.LeftPickUp.SetActive(true);
+							bothHands = false;
 						}
 						if(right == null){
 							HUD.RightPickUp.SetActive(true);
+							bothHands = false;
 						}
                     }
                 } else if ((fDown || f2Down) && rhit.transform.GetComponent<Interactable>() != null) {
@@ -204,7 +215,7 @@ public class Interaction : MonoBehaviour {
 			lr.alignment = LineAlignment.View;
 		}
 
-        hT = 1.0f;
+        hT = 0.35f;
     }
 
     private void CheckItemsNearby() {
