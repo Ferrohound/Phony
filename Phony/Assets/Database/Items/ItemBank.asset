@@ -18,22 +18,24 @@ MonoBehaviour:
       name: Teddy
       _bothHands: 0
       ID: 0
-      _attributes: 02000000
-      _attribute: 0
+      _attributes: 
+      _attribute: 2
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1506988263091170, guid: b2ae96dac097fd345a97b4c84507c180,
+      type: 2}
   - Name: Computer
     Attribute: 0
     item:
       name: 
       _bothHands: 0
       ID: 1
-      _attributes: 00000000
-      _attribute: 0
+      _attributes: 
+      _attribute: 3
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1255006858428862, guid: 2fad18f8cd1c6314fa0dce58577b95af,
+      type: 2}
   - Name: Mircrowave
     Attribute: 0
     item:
@@ -41,10 +43,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 2
       _attributes: 
-      _attribute: 0
+      _attribute: 3
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1750134679764780, guid: ce5ad50ad20c6d045a022b9078377127,
+      type: 2}
   - Name: Sink
     Attribute: 0
     item:
@@ -52,10 +55,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 3
       _attributes: 
-      _attribute: 0
+      _attribute: 4
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1511445036705924, guid: cd1186e461884b7428ae195afcf006cf,
+      type: 2}
   - Name: Rock
     Attribute: 0
     item:
@@ -63,10 +67,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 4
       _attributes: 
-      _attribute: 0
+      _attribute: 4
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1115019742713402, guid: 1298c9e82c7c5164eb760adb517a246b,
+      type: 2}
   - Name: Teapot Base
     Attribute: 0
     item:
@@ -74,10 +79,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 5
       _attributes: 
-      _attribute: 0
+      _attribute: 5
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1681516650020046, guid: 09e6238344f4cfa4eb6b10cfe3ddc684,
+      type: 2}
   - Name: Teapot Lid
     Attribute: 0
     item:
@@ -85,10 +91,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 6
       _attributes: 
-      _attribute: 0
+      _attribute: 5
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1458312211705782, guid: 36997770d95b7e544af2657c6276dd3e,
+      type: 2}
   - Name: Paper
     Attribute: 0
     item:
@@ -96,10 +103,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 7
       _attributes: 
-      _attribute: 0
+      _attribute: 2
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1036307448261422, guid: ce993dd669b3c784796801af07215acf,
+      type: 2}
   - Name: Cup
     Attribute: 0
     item:
@@ -107,10 +115,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 8
       _attributes: 
-      _attribute: 0
+      _attribute: 5
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1776103290268158, guid: d209d41faaa469a4494ce86ada9542d2,
+      type: 2}
   - Name: Flower Pot
     Attribute: 0
     item:
@@ -118,10 +127,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 9
       _attributes: 
-      _attribute: 0
+      _attribute: 5
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1915909751968026, guid: 28ca925c8538cbf40991a18d3e8ac6ae,
+      type: 2}
   - Name: Pipe
     Attribute: 0
     item:
@@ -129,10 +139,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 10
       _attributes: 
-      _attribute: 0
+      _attribute: 3
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1077081521242908, guid: 273d330af161b4443b9fc00be11e8b0b,
+      type: 2}
   - Name: Crumbs
     Attribute: 0
     item:
@@ -151,10 +162,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 12
       _attributes: 
-      _attribute: 0
+      _attribute: 5
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1402728090643784, guid: 74e43a00e6e84b047a130703056da7c7,
+      type: 2}
   - Name: Flour
     Attribute: 0
     item:
@@ -162,10 +174,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 13
       _attributes: 
-      _attribute: 0
+      _attribute: 2
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1246220129532052, guid: 645a3819ce30bb248b4079e0c521758b,
+      type: 2}
   - Name: Stool
     Attribute: 0
     item:
@@ -173,10 +186,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 14
       _attributes: 
-      _attribute: 0
+      _attribute: 4
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1501531775277390, guid: 7fd4c48ca7f685e4fbd17e006c1c4187,
+      type: 2}
   - Name: Strawberry
     Attribute: 0
     item:
@@ -184,10 +198,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 15
       _attributes: 
-      _attribute: 0
+      _attribute: 6
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1796907048636988, guid: 3925eed07b3d74449b252c722e2638d6,
+      type: 2}
   - Name: Book
     Attribute: 0
     item:
@@ -217,10 +232,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 18
       _attributes: 
-      _attribute: 0
+      _attribute: 4
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1784637910140570, guid: bcaa16d0f7a4f8f43bc6361f6a0e19a0,
+      type: 2}
   - Name: Can
     Attribute: 0
     item:
@@ -228,10 +244,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 19
       _attributes: 
-      _attribute: 0
+      _attribute: 3
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1071475282480804, guid: 30e3c932852412e47873994e102c05e7,
+      type: 2}
   - Name: Plant
     Attribute: 0
     item:
@@ -239,10 +256,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 20
       _attributes: 
-      _attribute: 0
+      _attribute: 6
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1455977671710946, guid: 9df96ffa07ac98840bd4fb46f2f56e19,
+      type: 2}
   - Name: Pencil
     Attribute: 0
     item:
@@ -261,10 +279,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 22
       _attributes: 
-      _attribute: 0
+      _attribute: 2
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1977285224069602, guid: a5484dfe451a26a43a14f4326483a8f5,
+      type: 2}
   - Name: Butter
     Attribute: 0
     item:
@@ -272,10 +291,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 23
       _attributes: 
-      _attribute: 0
+      _attribute: 6
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1165948538382942, guid: eef29bb4ba64d3d46a4f27789d99186d,
+      type: 2}
   - Name: Milk
     Attribute: 0
     item:
@@ -283,12 +303,13 @@ MonoBehaviour:
       _bothHands: 0
       ID: 24
       _attributes: 
-      _attribute: 0
+      _attribute: 1
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1621543195920714, guid: 7bc13d6e3aa3fc74c8bd07fa0af4629b,
+      type: 2}
   - Name: Water Balloon
-    Attribute: 0
+    Attribute: 1
     item:
       name: 
       _bothHands: 0
@@ -316,10 +337,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 27
       _attributes: 
-      _attribute: 0
+      _attribute: 6
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1963149990441390, guid: a8429aa017cf9b14c8ce978f11db2a46,
+      type: 2}
   - Name: Signed Sheet
     Attribute: 0
     item:
@@ -338,7 +360,7 @@ MonoBehaviour:
       _bothHands: 0
       ID: 29
       _attributes: 
-      _attribute: 0
+      _attribute: 5
       special: 0
     Icon: {fileID: 0}
     gameObject: {fileID: 1546330556800590, guid: 74ffa78914360234da7cfa5246766a64,
@@ -482,10 +504,11 @@ MonoBehaviour:
       _bothHands: 0
       ID: 42
       _attributes: 
-      _attribute: 0
+      _attribute: 6
       special: 0
     Icon: {fileID: 0}
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1017034083745706, guid: 3ba2f07fa13b7194199de6f65ee72ce9,
+      type: 2}
   - Name: Enhanced Strawberry Cake
     Attribute: 0
     item:
