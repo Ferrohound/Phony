@@ -39,7 +39,7 @@ public class ItemGlow : MonoBehaviour
 
 	private void OnMouseEnter()
 	{
-		if(Vector3.Distance(transform.position, player.position)<3.5 && !Dialogue.running
+		if(Vector3.Distance(transform.position, Camera.main.transform.position)<3.5 && !Dialogue.running
 			&& !pc.bothHands)
 		{
 			_targetColor = GlowColor;
@@ -49,7 +49,7 @@ public class ItemGlow : MonoBehaviour
 	
 	private void OnMouseOver()
 	{
-		if(Vector3.Distance(transform.position, player.position)<3.5 && !Dialogue.running
+		if(Vector3.Distance(transform.position, Camera.main.transform.position)<3.5 && !Dialogue.running
 			&&!pc.bothHands)
 		{
 			_targetColor = GlowColor;

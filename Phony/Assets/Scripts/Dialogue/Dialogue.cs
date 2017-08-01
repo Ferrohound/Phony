@@ -577,9 +577,10 @@ public class Dialogue : MonoBehaviour {
 				{
 					//execute a midcall
 					case 'c':
-					current._midcalls[callCount].execute();
-					index++;
-					callCount++;
+						if(index>current._midcalls.Count)
+							current._midcalls[callCount].execute();
+						index++;
+						callCount++;
 					break;
 					
 					//pause the dialogue for a moment

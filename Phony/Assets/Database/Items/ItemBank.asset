@@ -554,4 +554,16 @@ MonoBehaviour:
     Icon: {fileID: 0}
     gameObject: {fileID: 1587955665523794, guid: 6b0fd4a0d1673ec4c8fed7ac97a78db3,
       type: 2}
+  - Name: Sludge
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 47
+      _attributes: 
+      _attribute: 0
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 1550949311887404, guid: 7bccd8e50b51ee848b1444774bb5f5bf,
+      type: 2}
   initialized: 0

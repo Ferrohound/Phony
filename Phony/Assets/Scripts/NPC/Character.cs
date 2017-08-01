@@ -185,12 +185,12 @@ public class Character : MonoBehaviour{
 			Debug.Log("Dialogue isn't initialized!");
 			return;
 		}
+		if(!dialogue.auto)
+			return;
 		
 		//if the tag isn't player, if the dialogue isn't auto, or if a dialogue is already running
 		//return home
-		if(col.tag!="Player" || !dialogue.auto || Dialogue.running)
-			return;
-		
-		RunDCheck(col);
+		dialogue.auto = false;
+		Talk(0, col);
 	}
 }
