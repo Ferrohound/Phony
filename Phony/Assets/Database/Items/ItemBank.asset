@@ -566,4 +566,28 @@ MonoBehaviour:
     Icon: {fileID: 0}
     gameObject: {fileID: 1550949311887404, guid: 7bccd8e50b51ee848b1444774bb5f5bf,
       type: 2}
+  - Name: Book
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 48
+      _attributes: 
+      _attribute: 0
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 1916818166056518, guid: 75d3d3c083fed5f4c8a1932b36c8c6a4,
+      type: 2}
+  - Name: Sludge
+    Attribute: 0
+    item:
+      name: 
+      _bothHands: 0
+      ID: 49
+      _attributes: 
+      _attribute: 0
+      special: 0
+    Icon: {fileID: 0}
+    gameObject: {fileID: 1550949311887404, guid: 7bccd8e50b51ee848b1444774bb5f5bf,
+      type: 2}
   initialized: 0

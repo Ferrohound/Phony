@@ -123,13 +123,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DB: {fileID: 11400000, guid: 275cee5793328d34389544123a17a007, type: 2}
+  Affectors: 07000000
+  Effects:
+  - {fileID: 1789983054902494, guid: 4dd6798092ed69a4f8ad9ecb96cbaa62, type: 2}
+  KillMe: 01
   item:
     name: 
     _bothHands: 0
     ID: 0
     _attributes: 
+    _attribute: 0
     special: 0
-  itemName: 
+  itemName: Paper
   itemTest: 
   held: 0
 --- !u!114 &114607059083152138

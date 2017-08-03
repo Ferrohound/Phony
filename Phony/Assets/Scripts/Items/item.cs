@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 [System.Serializable]
 public class Item{
 	
-	public enum Attributes {slimy, wet, absorbent, metal, hard, glass, mushy};
+	public enum Attributes {slimy, wet, absorbent, metal, hard, glass, mushy, fire, flamable};
 	
 	//maybe give them an ID too
 	//outer tag

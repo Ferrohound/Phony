@@ -184,12 +184,16 @@ public class Dialogue : MonoBehaviour {
 		//if there is no name, don't display the name box
 		if(node._name == null || node._name == "")
 		{
-			Name.transform.parent.gameObject.SetActive(false);
+			if(Name.transform.parent!=null)
+				Name.transform.parent.gameObject.SetActive(false);
 		}
 		else
 		{
-			Name.transform.parent.gameObject.SetActive(true);
-			Name.GetComponent<Text>().text = node._name;
+			if(Name.transform.parent!=null)
+			{
+				Name.transform.parent.gameObject.SetActive(true);
+				Name.GetComponent<Text>().text = node._name;
+			}
 		}
 		
 		//if text is still scrolling in the coroutine, stop it
@@ -577,8 +581,8 @@ public class Dialogue : MonoBehaviour {
 				{
 					//execute a midcall
 					case 'c':
-						if(index>current._midcalls.Count)
-							current._midcalls[callCount].execute();
+						//if(callCount>current._midcalls.Count)
+							//current._midcalls[callCount].execute();
 						index++;
 						callCount++;
 					break;

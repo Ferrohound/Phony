@@ -180,6 +180,9 @@ public class Character : MonoBehaviour{
 	//exit conversation
 	void OnTriggerEnter(Collider col)
 	{
+		if(col.tag != "Player")
+			return;
+		
 		if(dialogue == null)
 		{
 			Debug.Log("Dialogue isn't initialized!");

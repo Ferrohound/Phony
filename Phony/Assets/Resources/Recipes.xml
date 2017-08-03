@@ -13,6 +13,17 @@
 			</_dst2>
 		</Recipe>
 		<Recipe>
+			<_name>Book</_name>
+			<_item1>Paper</_item1>
+			<_dst1>
+				true
+			</_dst1>
+			<_item2>Paper</_item2>
+			<_dst2>
+				true
+			</_dst2>
+		</Recipe>
+		<Recipe>
 			<_name>Teapot</_name>
 			<_item1>Teapot Lid</_item1>
 			<_dst1>
